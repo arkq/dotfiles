@@ -1,0 +1,11 @@
+[user]
+	name = Arkadiusz Bokowy
+	email = arkadiusz.bokowy@gmail.com
+[alias]
+	ad = add
+	co = checkout
+	cm = commit
+	st = status
+	sh = show
+[push]
+	default = simple
