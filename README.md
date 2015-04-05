@@ -17,4 +17,4 @@ Usage
 Links
 -----
 
-1. [dottie](https://gist.github.com/Arkq)
+1. [dottie](https://gist.github.com/Arkq/2eef0a29d8b18cbda2bd)
