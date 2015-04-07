@@ -7,6 +7,32 @@
  * Compilation:
  * gcc -o dottie dottie.c
  *
+ * Requirements:
+ * Coreutils version >= 8.16 is required (version >= 8.22 is recommended due
+ * to bug in the ln tool).
+ *
+ * Synopsis:
+ *
+ * There is a lot of config file (aka dotfile) managing tools and approaches
+ * on the market already. Unfortunately none of them is centered on one job
+ * and one job only - managing them. Since, this task could be achieved in a
+ * few lines of script, why not to make it in a more efficient and cool way -
+ * a small tool written in C.
+ *
+ * This small tool takes its philosophy from the git itself (coupled usage is
+ * recommended). For the managing purpose one does not have to use any other
+ * command than dottie - e.g. adding files to the bucket and later sync. There
+ * are three available ways of synchronization: copying, symbolic linking and
+ * hard linking. For the EXT-based file systems symlink is recommended.
+ *
+ * Exemplary usage:
+ *
+ *   $ mkdir -p /mnt/backups/dotfiles/ && cd $_
+ *   $ dottie init          # initialize bucket
+ *   $ dottie add ~/.vimrc  # add or update file
+ *   $ dottie               # show status
+ *   $ dottie -s sync       # create links
+ *
  */
 
 #define _GNU_SOURCE
@@ -123,7 +149,7 @@ static void unix_copy(const char *src, const char *dst, int force) {
 
 	unix_mkdir(dst);
 
-	spawnlp("cp", "cp", "-ai", src, dst, (char *)NULL);
+	spawnlp("cp", "cp", "-aTi", src, dst, (char *)NULL);
 	wait(NULL);
 }
 
