@@ -66,6 +66,15 @@ enum sync_action {
 	SYNC_ACTION_HARDLINK,
 };
 
+/* list of available sync statuses */
+enum sync_status {
+	SYNC_STATUS_MISSING = 0,
+	SYNC_STATUS_SYNCED,
+	SYNC_STATUS_SYMBOLIC,
+	SYNC_STATUS_HARDLINK,
+	SYNC_STATUS_DIRECTORY,
+	SYNC_STATUS_DIVERGED,
+};
 
 /* dottie executable name */
 static const char *dottie;
@@ -193,8 +202,9 @@ static int traverse(const char *fpath, const struct stat *sb, int typeflag,
 				fpath_base_length - dottie_ext_length, dottie_extension) != 0)
 		return FTW_CONTINUE;
 
-	char *fpath_dest;
+	enum sync_status status;
 	struct stat sb_dest;
+	char *fpath_dest;
 
 	/* build destination path - one relative to the user home directory */
 	if (asprintf(&fpath_dest, "%s/%s", user_homedir, &fpath[2]) == -1) {
@@ -203,38 +213,58 @@ static int traverse(const char *fpath, const struct stat *sb, int typeflag,
 	}
 	fpath_dest[strlen(fpath_dest) - dottie_ext_length] = '\0';
 
-	/* display status information for current configuration */
-	if (dottie_command == DOTTIE_COMMAND_STATUS) {
-		if (lstat(fpath_dest, &sb_dest) == 0) {
-			const int islink = S_ISLNK(sb_dest.st_mode);
+	/* check current synchronization status */
+	if (lstat(fpath_dest, &sb_dest) == 0) {
+		const int islink = S_ISLNK(sb_dest.st_mode);
+		if (islink)
+			stat(fpath_dest, &sb_dest);
+		if (sb->st_ino == sb_dest.st_ino) {
 			if (islink)
-				stat(fpath_dest, &sb_dest);
-			if (sb->st_ino == sb_dest.st_ino) {
-				if (islink)
-					printf("[->] %s :: %s\n", &fpath[2], fpath_dest);
-				else
-					printf("[=>] %s :: %s\n", &fpath[2], fpath_dest);
-			}
-			else {
-				if (sb->st_mtime == sb_dest.st_mtime && sb->st_size == sb_dest.st_size &&
-						sb->st_mode == sb_dest.st_mode && sb->st_uid == sb_dest.st_uid &&
-						sb->st_gid == sb_dest.st_gid) {
-					if (typeflag == FTW_D)
-						printf("(==) %s :: %s\n", &fpath[2], fpath_dest);
-					else
-						printf("[==] %s :: %s\n", &fpath[2], fpath_dest);
-				}
-				else
-					printf("[!=] %s :: %s\n", &fpath[2], fpath_dest);
-			}
+				status = SYNC_STATUS_SYMBOLIC;
+			else
+				status = SYNC_STATUS_HARDLINK;
 		}
 		else {
-			if (errno == ENOENT)
-				printf("[  ] %s\n", &fpath[2]);
+			if (sb->st_mtime == sb_dest.st_mtime && sb->st_size == sb_dest.st_size &&
+					sb->st_mode == sb_dest.st_mode && sb->st_uid == sb_dest.st_uid &&
+					sb->st_gid == sb_dest.st_gid) {
+				if (typeflag == FTW_D)
+					status = SYNC_STATUS_DIRECTORY;
+				else
+					status = SYNC_STATUS_SYNCED;
+			}
 			else
-				perror("warning: stat destination path");
+				status = SYNC_STATUS_DIVERGED;
 		}
 	}
+	else {
+		status = SYNC_STATUS_MISSING;
+		if (errno != ENOENT)
+			perror("warning: stat destination path");
+	}
+
+	/* display current status information */
+	if (dottie_command == DOTTIE_COMMAND_STATUS)
+		switch (status) {
+		case SYNC_STATUS_MISSING:
+			printf("[  ] %s\n", &fpath[2]);
+			break;
+		case SYNC_STATUS_SYNCED:
+			printf("[==] %s :: %s\n", &fpath[2], fpath_dest);
+			break;
+		case SYNC_STATUS_SYMBOLIC:
+			printf("[->] %s :: %s\n", &fpath[2], fpath_dest);
+			break;
+		case SYNC_STATUS_HARDLINK:
+			printf("[=>] %s :: %s\n", &fpath[2], fpath_dest);
+			break;
+		case SYNC_STATUS_DIRECTORY:
+			printf("(==) %s :: %s\n", &fpath[2], fpath_dest);
+			break;
+		case SYNC_STATUS_DIVERGED:
+			printf("[!=] %s :: %s\n", &fpath[2], fpath_dest);
+			break;
+		}
 
 	/* synchronize configuration with user home directory */
 	if (dottie_command == DOTTIE_COMMAND_SYNC) {
@@ -243,10 +273,12 @@ static int traverse(const char *fpath, const struct stat *sb, int typeflag,
 			unix_copy(fpath, fpath_dest, dottie_force);
 			break;
 		case SYNC_ACTION_SYMBOLIC:
-			unix_symlink(fpath, fpath_dest, dottie_force);
+			if (status != SYNC_STATUS_SYMBOLIC)
+				unix_symlink(fpath, fpath_dest, dottie_force);
 			break;
 		case SYNC_ACTION_HARDLINK:
-			unix_link(fpath, fpath_dest, dottie_force);
+			if (status != SYNC_STATUS_HARDLINK)
+				unix_link(fpath, fpath_dest, dottie_force);
 			break;
 		}
 	}
