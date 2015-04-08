@@ -1,0 +1,30 @@
+# .alias: bash environment pimping
+
+# walk speedups and typo fixes
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cd..='cd ..'
+alias cd-='cd -'
+
+alias rd='rmdir'
+alias md='mkdir -p'
+
+alias ll='ls -l --color=auto'
+alias l.='ls -d .* --color=auto'
+
+# even less typing than less
+alias o='less'
+
+alias ggrep='git grep -n'
+
+# check errors on a daily basis
+alias gcc='gcc -Wall -Wextra'
+alias g++='g++ -Wall -Wextra'
+
+alias gvim='gvim -p'
+
+# random cool stuff
+alias curl-ajax='curl -H "X-Requested-With: XMLHttpRequest"'
+alias grep-nonascii='grep -P -n "[\x80-\xFF]"'
+alias mpg123='mpg123 -qC -b 1024'
+alias python-http='python -m http.server'
