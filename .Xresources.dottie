@@ -1,0 +1,23 @@
+URxvt*font:               xft:Terminus:pixelsize=12
+URxvt*boldFont:           xft:Terminusmod:bold:pixelsize=12
+URxvt*geometry:           120x25
+URxvt*secondaryScreen:    false
+URxvt*reverseVideo:       true
+URxvt*loginShell:         false
+URxvt*shading:            40
+URxvt*scrollstyle:        plain
+URxvt*scrollBar_floating: true
+
+Xautolock*corners:        +-00
+Xautolock*cornersize:     2
+Xautolock*cornerdelay:    1
+Xautolock*cornerredelay:  2
+
+XCalendar*calendarDir:    /home/arek/.xcalendar
+XCalendar*firstDay:       1
+
+ALock*background*shade:   50
+ALock*background*blur:    50
+ALock*background*mono:    true
+ALock*cursor*name:        plus
+ALock*input*input:        white
