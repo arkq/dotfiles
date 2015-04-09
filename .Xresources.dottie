@@ -1,7 +1,6 @@
 URxvt*font:               xft:Terminus:pixelsize=12
 URxvt*boldFont:           xft:Terminusmod:bold:pixelsize=12
 URxvt*geometry:           120x25
-URxvt*secondaryScreen:    false
 URxvt*reverseVideo:       true
 URxvt*loginShell:         false
 URxvt*shading:            40
