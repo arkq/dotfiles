@@ -1,4 +1,4 @@
-# .alias: bash environment pimping
+# .aliases: bash environment pimping
 
 # walk speedups and typo fixes
 alias ..='cd ..'

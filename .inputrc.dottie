@@ -1,0 +1,12 @@
+# .inputrc: readline customizations
+
+set colored-stats on
+
+# smart-ass completion mode
+set completion-ignore-case on
+set completion-map-case on
+set skip-completed-text on
+set show-all-if-ambiguous on
+
+# readline adblock
+set match-hidden-files off

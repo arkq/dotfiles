@@ -1,0 +1,18 @@
+# This file is read each time a login shell is started.
+# All other interactive shells will read .bashrc only.
+
+# load global settings
+. /etc/profile
+
+# run private and superuser tools
+export PATH=$HOME/bin:$PATH:/usr/sbin:/sbin/
+
+# fix pipelining in the gpg for pinentry
+export GPG_AGENT_ENABLE=true
+export GPG_TTY=$(tty)
+
+# python interpreter customizations
+export PYTHONSTARTUP=$HOME/.pystartup
+
+# define our X session type
+export XSESSION=fluxbox
