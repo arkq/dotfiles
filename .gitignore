@@ -1,4 +1,8 @@
 # ignore private (not dot related) files
+
 .fluxbox.dottie/bin/
 .fluxbox.dottie/images/
 .fluxbox.dottie/fbrun_history
+
+.vim.dottie/bundle/
+.vim.dottie/spell/
