@@ -50,6 +50,10 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 
+#ifndef FTW_ACTIONRETVAL
+# define FTW_ACTIONRETVAL 16
+# define FTW_CONTINUE      0
+#endif
 
 /* list of available commands */
 enum dottie_command {
@@ -93,7 +97,6 @@ static char *user_homedir;
 
 /* dottie anchor extension */
 static char *dottie_extension;
-
 
 /* Windows-based function for spawning child processes. On success, the PID
  * of the child process is returned. On error, -1 is returned, and errno is
@@ -284,8 +287,10 @@ static int traverse(const char *fpath, const struct stat *sb, int typeflag,
 	}
 
 	free(fpath_dest);
+#ifdef FTW_SKIP_SUBTREE
 	if (typeflag == FTW_D)
 		return FTW_SKIP_SUBTREE;
+#endif
 	return FTW_CONTINUE;
 }
 
