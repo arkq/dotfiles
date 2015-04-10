@@ -1,5 +1,8 @@
 # .inputrc: readline customizations
 
+# load distribution global settings
+$include /etc/inputrc
+
 set colored-stats on
 
 # smart-ass completion mode
