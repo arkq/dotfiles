@@ -13,6 +13,7 @@ colorscheme desert
 set guifont=Terminus\ 12
 set mousemodel=extend
 set nomousehide
+set title
 
 " terminal enhancements
 set lazyredraw
