@@ -7,6 +7,7 @@ export PATH=$HOME/.fluxbox/bin:$PATH
 # basic X server configuration
 xset r rate 250 30
 setxkbmap -option ctrl:nocaps
+setxkbmap -option compose:lwin-altgr
 redshift -l 52:21 -t 6500:4000 -m vidmode &
 rundom -b -r -i 7200 -d 3600 "fbsetbg -R ~/.fluxbox/images/"
 compton -b --config ~/.config/compton.conf
