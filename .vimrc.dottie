@@ -10,7 +10,6 @@ set softtabstop=2
 set textwidth=98
 
 colorscheme desert
-set guifont=Terminus\ 12
 set mousemodel=extend
 set nomousehide
 set title
