@@ -9,8 +9,10 @@ alias cd-='cd -'
 alias rd='rmdir'
 alias md='mkdir -p'
 
-alias ll='ls -l --color=auto'
-alias l.='ls -d .* --color=auto'
+alias la='ls -la'
+alias ll='ls -l'
+alias l.='ls -d .*'
+alias ll.='ll -d .*'
 
 # even less typing than less
 alias o='less'
