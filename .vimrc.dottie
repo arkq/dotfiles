@@ -105,7 +105,7 @@ nmap <F4> :Gblame<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " exclude intermediate files from the tree
-let NERDTreeIgnore = ['\.o$', '\.pyc$']
+let NERDTreeIgnore = ['\.o$', '\.py[co]$']
 
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_flake8_args = '--ignore=E501'
