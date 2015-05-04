@@ -3,9 +3,10 @@
 	email = arkadiusz.bokowy@gmail.com
 [alias]
 	ad = add
-	co = checkout
 	cm = commit
-	st = status
+	co = checkout
 	sh = show
+	st = status
+	dissect = bisect
 [push]
 	default = simple
