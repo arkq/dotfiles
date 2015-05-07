@@ -1,11 +1,15 @@
 URxvt*font:               xft:Terminus:pixelsize=12
-URxvt*boldFont:           xft:Terminusmod:bold:pixelsize=12
+URxvt*iconFile:           /usr/share/icons/gnome/48x48/apps/terminal.png
 URxvt*geometry:           120x25
 URxvt*reverseVideo:       true
 URxvt*loginShell:         false
 URxvt*shading:            40
 URxvt*scrollstyle:        plain
 URxvt*scrollBar_floating: true
+URxvt*perl-ext-common:    font-size,selection
+URxvt*keysym.C-Up:        perl:font-size:increase
+URxvt*keysym.C-Down:      perl:font-size:decrease
+URxvt*font-size.step:     2
 
 Xautolock*corners:        +-00
 Xautolock*cornersize:     2
