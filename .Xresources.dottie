@@ -11,6 +11,11 @@ URxvt*keysym.C-Up:        perl:font-size:increase
 URxvt*keysym.C-Down:      perl:font-size:decrease
 URxvt*font-size.step:     2
 
+CMus*iconFile:            /home/arek/.icons/hicolor/48x48/apps/cmus.png
+Irssi*iconFile:           /home/arek/.icons/hicolor/48x48/apps/irssi.png
+MC*iconFile:              /home/arek/.icons/hicolor/48x48/apps/mc.png
+RTorrent*iconFile:        /home/arek/.icons/hicolor/48x48/apps/rtorrent.png
+
 Xautolock*corners:        +-00
 Xautolock*cornersize:     2
 Xautolock*cornerdelay:    1

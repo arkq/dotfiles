@@ -56,7 +56,7 @@ Mod4 d :ToggleCmd {ShowDesktop} {DeIconify all originquiet}
 Mod4 s :StickWindow
 
 Mod1 F1 :Exec urxvtc
-Mod1 F3 :Exec urxvtc -ssc +sb -e /usr/bin/mc
+Mod1 F3 :Exec urxvtc -ssc +sb -name MC -e /usr/bin/mc
 XF86Launch1 :Exec firefox >/dev/null
 
 Control Mod1 Escape :Exec xkill
