@@ -10,5 +10,8 @@ export PATH=$HOME/bin:$PATH:/usr/sbin:/sbin/
 # python interpreter customizations
 export PYTHONSTARTUP=$HOME/.pystartup
 
+# get rid of accessibility support
+export NO_AT_BRIDGE=1
+
 # define our X session type
 export XSESSION=fluxbox
