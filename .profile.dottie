@@ -7,10 +7,6 @@
 # run private and superuser tools
 export PATH=$HOME/bin:$PATH:/usr/sbin:/sbin/
 
-# fix pipelining in the gpg for pinentry
-export GPG_AGENT_ENABLE=true
-export GPG_TTY=$(tty)
-
 # python interpreter customizations
 export PYTHONSTARTUP=$HOME/.pystartup
 

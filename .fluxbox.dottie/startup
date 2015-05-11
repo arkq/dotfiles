@@ -14,6 +14,7 @@ compton -b --config ~/.config/compton.conf
 
 # basic application set
 xautolock -time 6 -locker "alock -b shade -c glyph -i frame" -secure &
+gpg-agent --sh --enable-ssh-support --daemon
 skippy-xd --start-daemon &
 syndaemon -d -i 1 -R -t -k
 urxvtd -f -q -o

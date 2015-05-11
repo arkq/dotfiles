@@ -13,3 +13,11 @@ test -s ~/.aliases && . ~/.aliases || true
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT='%F %r  '
 export HISTIGNORE='history:pwd:ls:ll'
+
+# required by curses-based pinentry
+export GPG_TTY=$(tty)
+
+# load our X-based pinentry GPG agent
+if [ "${DISPLAY}" ] && [ -s ~/.gpg-agent-info ]; then
+	. ~/.gpg-agent-info
+fi
