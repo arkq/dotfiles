@@ -5,6 +5,7 @@ if has('vim_starting')
   set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
+let g:neobundle#types#git#clone_depth = 1
 call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
