@@ -11,24 +11,30 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'rainux/vim-desert-warm-256'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'rainux/vim-desert-warm-256'
+
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-scripts/matchit.zip'
+
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-scripts/yaifa.vim'
 
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/matchit.zip'
+
 NeoBundle 'hynek/vim-python-pep8-indent'
-NeoBundle 'vim-scripts/HTML-AutoCloseTag'
 NeoBundle 'vim-scripts/python_fold'
+
+NeoBundle 'vim-scripts/HTML-AutoCloseTag'
 
 if has('python')
 	NeoBundle 'Rip-Rip/clang_complete'

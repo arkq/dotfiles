@@ -84,6 +84,20 @@ let g:neocomplete#enable_fuzzy_completion = 0
 let g:neocomplete#force_overwrite_completefunc = 1
 let g:airline#extensions#disable_rtp_load = 1
 
+let g:gitgutter_enabled = 0
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_escape_grep = 1
+let g:gitgutter_map_keys = 0
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+
+" exclude intermediate files from the tree
+let NERDTreeIgnore = ['\.o$', '\.py[co]$']
+
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_flake8_args = '--ignore=E501'
+let g:syntastic_cpp_config_file = '.clang_complete'
+
 " smart TAB completion
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" :
 	\ <SID>startswithspace() ? "\<Tab>" : neocomplete#start_manual_complete()
@@ -103,15 +117,9 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 nmap <silent><F2> :NERDTreeToggle<CR>
+nmap <silent><F3> :GitGutterToggle<CR>
 nmap <silent><F4> :Gblame<CR>
 nmap <silent><F8> :TagbarToggle<CR>
-
-" exclude intermediate files from the tree
-let NERDTreeIgnore = ['\.o$', '\.py[co]$']
-
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_flake8_args = '--ignore=E501'
-let g:syntastic_cpp_config_file = '.clang_complete'
 
 if !exists('g:neocomplete#force_omni_input_patterns')
 	let g:neocomplete#force_omni_input_patterns = {}
@@ -139,3 +147,9 @@ let g:neocomplete#force_omni_input_patterns.python =
 
 " python automatic import sorting
 autocmd FileType python map <C-i> :Isort<CR>
+
+" customized background colors for git gutter symbols
+highlight GitGutterAdd guibg=green ctermbg=green gui=bold cterm=bold
+highlight GitGutterChange guibg=darkyellow ctermbg=darkyellow gui=bold cterm=bold
+highlight GitGutterChangeDelete guibg=darkyellow ctermbg=darkyellow gui=bold cterm=bold
+highlight GitGutterDelete guibg=darkred ctermbg=darkred gui=bold cterm=bold
