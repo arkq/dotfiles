@@ -1,6 +1,8 @@
 " initialize package manager
 source ~/.vim/neobundlerc
 
+colorscheme desert-warm-256
+
 filetype plugin indent on
 set autoindent
 set smarttab
@@ -9,10 +11,9 @@ set shiftwidth=2
 set softtabstop=2
 set textwidth=98
 
-colorscheme desert
+set title
 set mousemodel=extend
 set nomousehide
-set title
 
 " terminal enhancements
 set lazyredraw
