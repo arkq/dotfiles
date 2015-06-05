@@ -1,5 +1,7 @@
 # ignore private (not dot related) files
 
+icon-theme.cache
+
 .fluxbox.dottie/bin/
 .fluxbox.dottie/images/
 .fluxbox.dottie/fbrun_history

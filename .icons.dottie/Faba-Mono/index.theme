@@ -1,0 +1,19 @@
+[Icon Theme]
+Name=Faba-Mono
+Inherits=Faba,Moka,gnome
+Comment=Moka Overlay
+Directories=symbolic/apps,symbolic/status
+
+[symbolic/apps]
+Context=Applications
+Size=16
+MinSize=16
+MaxSize=512
+Type=Scalable
+
+[symbolic/status]
+Context=Status
+Size=16
+MinSize=16
+MaxSize=512
+Type=Scalable
