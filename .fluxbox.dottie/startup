@@ -22,7 +22,7 @@ dunst &
 
 # delayed ignition startup
 sh -c """sleep 1
-	cbatticon -n -u 30 &
+	gtk3-nocsd cbatticon -n -u 30 &
 	claws-mail &
 	keepassx -min -lock &
 #	parcellite &

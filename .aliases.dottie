@@ -28,5 +28,4 @@ alias gvim='gvim -p'
 # random cool stuff
 alias curl-ajax='curl -H "X-Requested-With: XMLHttpRequest"'
 alias grep-nonascii='grep -P -n "[\x80-\xFF]"'
-alias mpg123='mpg123 -qC -b 1024'
 alias python-http='python -m http.server'
