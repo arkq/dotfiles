@@ -26,6 +26,7 @@ sh -c """sleep 1
 	claws-mail &
 	keepassx -min -lock &
 #	parcellite &
+	pnmixer &
 #	rssguard &
 	tinymount &
 	wpa_gui -t -q -m 5 &
