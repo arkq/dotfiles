@@ -76,10 +76,10 @@ XF86MonBrightnessUp :Exec fn-backlight
 # Viedeo output
 XF86Display :Exec fn-hdmi
 
-# Volume settings
-XF86AudioMute :Exec fn-audio
-XF86AudioLowerVolume :Exec fn-audio
-XF86AudioRaiseVolume :Exec fn-audio
+## Volume settings
+#XF86AudioMute :Exec fn-audio
+#XF86AudioLowerVolume :Exec fn-audio
+#XF86AudioRaiseVolume :Exec fn-audio
 
 # Touchpad toggle actions
 XF86TouchpadOn :Exec fn-touchpad ON
