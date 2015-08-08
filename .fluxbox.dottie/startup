@@ -24,7 +24,7 @@ dunst &
 sh -c """sleep 1
 	gtk3-nocsd cbatticon -n -u 30 &
 	claws-mail &
-	keepassx -min -lock &
+	keepassx --minimize &
 #	parcellite &
 	pnmixer &
 #	rssguard &
