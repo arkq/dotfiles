@@ -6,14 +6,14 @@ Directories=symbolic/apps,symbolic/status
 
 [symbolic/apps]
 Context=Applications
-Size=16
+Size=64
 MinSize=16
 MaxSize=512
 Type=Scalable
 
 [symbolic/status]
 Context=Status
-Size=16
+Size=64
 MinSize=16
 MaxSize=512
 Type=Scalable
