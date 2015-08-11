@@ -96,6 +96,10 @@ Mod4 c :Exec cmus-remote --pause
 Mod4 v :Exec cmus-remote --stop
 Mod4 b :Exec cmus-remote --next
 
+# toggle desktop notifications
+Mod4 Shift p :Exec pkill -x -USR1 dunst
+Mod4 p :Exec pkill -x -USR2 dunst
+
 # go to a specific tab in the current window
 Mod4 1 :Tab 1
 Mod4 2 :Tab 2
