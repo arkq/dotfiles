@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+; Change CapsLock into a Control key
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00
+
+; Fix Elantech swipe gesture (back/forward key emulation)
+[HKEY_CURRENT_USER\SOFTWARE\Elantech\SmartPad]
+"ThreeFingerMove_Enable"=dword:1
+"ThreeFingerMoveLeft_Func"=dword:3
+"ThreeFingerMoveRight_Func"=dword:4
+
+; Activate window under the mouse pointer
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"ActiveWindowTracking"=dword:1
+
+; Fine tuning for window tracking (do not rise window, change focus with 500ms delay)
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"UserPreferencesMask"=hex:9f,1e,07,80,12,00,00,00
+"ActiveWindTrkTimeout"=dword:500
