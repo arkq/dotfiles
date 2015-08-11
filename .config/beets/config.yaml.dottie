@@ -1,0 +1,29 @@
+# config.yaml - beets configuration
+
+directory: ~/music
+
+# load some useful plug-ins
+plugins: echonest fetchart lastgenre replaygain
+
+# get rid of localized characters
+asciify_paths: yes
+
+# art cover compatible with Windows
+art_filename: Folder
+
+paths:
+  comp: "!Compilations/[$original_year] $album%aunique{}/$track $title"
+  default: $albumartist/[$original_year] $album%aunique{}/$track $title
+  singleton: $artist/[$original_year] $title
+
+echonest:
+  convert: no
+  upload: no
+
+fetchart:
+  cautious: true
+  enforce_ratio: yes
+  maxwidth: 600
+
+lastgenre:
+  canonical: ""
