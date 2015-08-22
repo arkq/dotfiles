@@ -42,6 +42,7 @@ Mod4 Up :MacroCmd {MoveTo 0 0 TopLeft} {ResizeTo 100% 50%}
 Mod4 Down :MacroCmd {MoveTo 0 50% TopLeft} {ResizeTo 100% 50%}
 Mod4 Left :MacroCmd {MoveTo 0 0 TopLeft} {ResizeTo 50% 100%}
 Mod4 Right :MacroCmd {MoveTo 50% 0 TopLeft} {ResizeTo 50% 100%}
+Mouse10 :Maximize
 Mouse11 :Exec skippy-xd --toggle-window-picker
 
 # current window commands
