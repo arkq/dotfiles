@@ -52,7 +52,7 @@ session.screen0.window.focus.alpha:	255
 session.screen0.window.unfocus.alpha:	255
 session.screen0.windowMenu:	~/.fluxbox/windowmenu
 session.screen0.windowPlacement:	UnderMousePlacement
-session.screen0.workspaceNames:	One, Two, End,
+session.screen0.workspaceNames:	 ●○○ , ○●○ , ○○● ,
 session.screen0.workspaces:	3
 session.screen0.workspacewarping:	true
 session.appsFile:	~/.fluxbox/apps
