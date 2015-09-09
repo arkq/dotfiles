@@ -29,6 +29,7 @@ sh -c """sleep 1
 	pnmixer &
 #	rssguard &
 	tinymount &
+	viper-qt &
 	wpa_gui -t -q -m 5 &
 	xpad -h &
 	conky -d
