@@ -36,3 +36,4 @@ ALock*background*blur:    50
 ALock*background*mono:    true
 ALock*cursor*name:        plus
 ALock*input*input:        white
+ALock*backlight:          true

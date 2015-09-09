@@ -20,7 +20,7 @@ session.screen0.iconbar.mode:	{static groups} (workspace)
 session.screen0.iconbar.usePixmap:	true
 session.screen0.maxDisableMove:	false
 session.screen0.maxDisableResize:	false
-session.screen0.maxIgnoreIncrement:	false
+session.screen0.maxIgnoreIncrement:	true
 session.screen0.menu.alpha:	230
 session.screen0.menuDelay:	200
 session.screen0.noFocusWhileTypingDelay:	0
