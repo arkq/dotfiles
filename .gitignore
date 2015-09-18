@@ -6,5 +6,6 @@ icon-theme.cache
 .fluxbox.dottie/images/
 .fluxbox.dottie/fbrun_history
 
-.vim.dottie/bundle/
+.vim.dottie/autoload/
+.vim.dottie/plugged/
 .vim.dottie/spell/

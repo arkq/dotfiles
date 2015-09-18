@@ -1,5 +1,5 @@
 " initialize package manager
-source ~/.vim/neobundlerc
+source ~/.vim/plugrc
 
 colorscheme desert-warm-256
 
@@ -92,6 +92,9 @@ let g:gitgutter_map_keys = 0
 " exclude intermediate files from the tree
 let NERDTreeIgnore = ['\.o$', '\.py[co]$']
 
+" non-TAB based snippet expansion
+let g:UltiSnipsExpandTrigger = "<C-j>"
+
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_flake8_args = '--ignore=E501,W191'
 let g:syntastic_cpp_config_file = '.clang_complete'
@@ -106,14 +109,11 @@ function! s:startswithspace()
 endfunction
 
 " do not insert <CR> upon item selection
-inoremap <silent><CR> <C-r>=<SID>customcrfunction()<CR>
+inoremap <expr><CR> <SID>customcrfunction()
 function! s:customcrfunction()
 	return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
 nmap <silent><F2> :NERDTreeToggle<CR>
 nmap <silent><F3> :GitGutterToggle<CR>
 nmap <silent><F4> :Gblame<CR>
