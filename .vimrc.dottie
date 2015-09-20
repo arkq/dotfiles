@@ -23,8 +23,8 @@ set ttyfast
 nnoremap ; :
 vnoremap ; :
 
-" ignore white-spaces during diff
-set diffopt+=iwhite
+" make vertical diff by default
+set diffopt+=vertical
 
 set spell
 set spelllang=en_us
