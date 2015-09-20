@@ -114,6 +114,10 @@ function! s:customcrfunction()
 	return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 
+" auto-pairs workaround for buggy <CR> mapping
+let g:AutoPairsMapCR = 0
+imap <silent><CR> <CR><Plug>AutoPairsReturn
+
 nmap <silent><F2> :NERDTreeToggle<CR>
 nmap <silent><F3> :GitGutterToggle<CR>
 nmap <silent><F4> :Gblame<CR>
