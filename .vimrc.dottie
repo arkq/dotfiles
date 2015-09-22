@@ -54,7 +54,6 @@ nnoremap <silent><C-l> :nohl<CR><C-l>
 " nice line wrapping
 set linebreak
 set breakindent
-let &showbreak = '  '
 
 " folding tweaks
 set foldlevel=666
