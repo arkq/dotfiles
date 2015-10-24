@@ -30,6 +30,7 @@ sh -c """sleep 1
 #	rssguard &
 	tinymount &
 	viper-qt &
+	windy &
 	wpa_gui -t -q -m 5 &
 	xpad -h &
 	conky -d
