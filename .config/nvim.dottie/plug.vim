@@ -1,10 +1,10 @@
-" plugrc: vim-plug startup
+" plug.vim: vim-plug startup
 "
 " Kick-start command:
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Use capabilities of modern terminals
 Plug 'rainux/vim-desert-warm-256'

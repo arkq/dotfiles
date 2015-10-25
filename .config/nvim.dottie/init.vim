@@ -1,5 +1,5 @@
 " initialize package manager
-source ~/.vim/plugrc
+source ~/.config/nvim/plug.vim
 
 colorscheme desert-warm-256
 
