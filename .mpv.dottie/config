@@ -1,0 +1,12 @@
+## output drivers
+ao=alsa,
+vo=opengl,
+
+## use hardware mixer
+softvol=no
+
+## disable on-screen-controller
+osc=no
+
+## put player on top by default
+ontop=yes
