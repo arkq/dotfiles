@@ -129,6 +129,7 @@ endif
 " clang-based completion for C and C++
 let g:clang_complete_auto = 0
 let g:clang_auto_select = 1
+let g:clang_default_keymappings = 0
 let g:neocomplete#force_omni_input_patterns.c =
 	\ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
 let g:neocomplete#force_omni_input_patterns.cpp =
@@ -142,6 +143,7 @@ let g:neocomplete#force_omni_input_patterns.objcpp =
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#completions_enabled = 0
 let g:jedi#show_call_signatures = 0
+let g:jedi#smart_auto_mappings = 0
 autocmd FileType python setlocal omnifunc=jedi#completions
 let g:neocomplete#force_omni_input_patterns.python =
 	\ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
