@@ -22,8 +22,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/yaifa.vim'
 
 " Bucket full of snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+if has('python')
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+endif
 
 " Keyword completion system
 Plug 'Shougo/vimproc.vim'
