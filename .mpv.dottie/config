@@ -2,6 +2,10 @@
 ao=alsa,
 vo=opengl,
 
+## use hardware decoding (Intel GPU only)
+hwdec=vaapi
+hwdec-codecs=h264,mpeg2video,vc1,wmv3
+
 ## use hardware mixer
 softvol=no
 

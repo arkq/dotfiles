@@ -10,6 +10,9 @@ export PATH=$HOME/bin:$PATH:/usr/sbin:/sbin/
 # python interpreter customizations
 export PYTHONSTARTUP=$HOME/.pystartup
 
+# use full host capacity for make actions
+export MAKEFLAGS=-j$(nproc)
+
 # get rid of accessibility support
 export NO_AT_BRIDGE=1
 
