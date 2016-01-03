@@ -96,6 +96,7 @@ let g:UltiSnipsExpandTrigger = "<C-j>"
 
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_flake8_args = '--ignore=E501,W191'
+let g:syntastic_c_config_file = '.clang_complete'
 let g:syntastic_cpp_config_file = '.clang_complete'
 
 " smart TAB completion
