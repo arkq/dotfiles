@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Custom script for desktop environment initialization.
+
+# load system wide and user resources and key/button mappings
+test -s /etc/X11/xinit/Xresources && xrdb /etc/X11/xinit/Xresources
+test -s /etc/X11/xinit/Xmodmap && xmodmap /etc/X11/xinit/Xmodmap
+test -s $HOME/.Xresources && xrdb -merge $HOME/.Xresources
+test -s $HOME/.Xmodmap && xmodmap $HOME/.Xmodmap
+
+# load system wide scripts - extra 3rd party settings
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+	for f in /etc/X11/xinit/xinitrc.d/?* ; do
+		[ -x "$f" ] && . "$f"
+	done
+	unset f
+fi
+
+# basic X server configuration
+setxkbmap -option ctrl:nocaps
+setxkbmap -option compose:lwin-altgr
+xset r rate 250 30
+
+# basic X server look & feel
+redshift -l 52:21 -t 6500:4000 -m vidmode &
+syndaemon -d -i 1 -R -t -k
+
+# finally start X session manager
+exec $(/etc/X11/chooser.sh)
