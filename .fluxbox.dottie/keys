@@ -51,7 +51,7 @@ Mod4 F10 :Maximize
 Mod4 F11 :Fullscreen
 
 # windows-like key mapping
-Mod4 q :Exec fbrun -bg black -fg white -font Terminus:size=10 -h 16 -w 114
+Mod4 q :Exec dmenu_run -f -i -fn Terminus-10 -nb black -nf white -sf white -sb '#666666'
 Mod4 l :Exec alock -b shade -c glyph -i frame
 Mod4 d :ToggleCmd {ShowDesktop} {DeIconify all originquiet}
 Mod4 s :StickWindow
