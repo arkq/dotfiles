@@ -58,7 +58,6 @@ Mod4 s :StickWindow
 
 Mod1 F1 :Exec urxvtc
 Mod1 F3 :Exec urxvtc -ssc +sb -name MC -e /usr/bin/mc
-XF86Launch1 :Exec firefox >/dev/null
 
 Control Mod1 Escape :Exec xkill
 Control Mod1 r :Exec pkill -USR1 redshift
@@ -77,10 +76,10 @@ XF86MonBrightnessUp :Exec fn-backlight
 # Viedeo output
 XF86Display :Exec fn-hdmi
 
-## Volume settings
-#XF86AudioMute :Exec fn-audio
-#XF86AudioLowerVolume :Exec fn-audio
-#XF86AudioRaiseVolume :Exec fn-audio
+# Volume controls
+XF86AudioMute :Exec fn-audio
+XF86AudioLowerVolume :Exec fn-audio
+XF86AudioRaiseVolume :Exec fn-audio
 
 # Touchpad toggle actions
 XF86TouchpadOn :Exec fn-touchpad ON
