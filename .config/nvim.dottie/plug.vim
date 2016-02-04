@@ -21,6 +21,9 @@ Plug 'tpope/vim-fugitive'
 " Indentation automatic detection
 Plug 'vim-scripts/yaifa.vim'
 
+" Line and column jumper
+Plug 'kopischke/vim-fetch'
+
 " Bucket full of snippets
 if has('python')
 	Plug 'SirVer/ultisnips'
