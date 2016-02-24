@@ -1,20 +1,21 @@
-[app] (class=FbRun)
-	[Position] (TOPLEFT) {0 0}
-	[Deco] {NONE}
-	[Alpha] {200}
+[app] (class=Conky)
+	[Dimensions] {300 101%}
+	[Position] (RIGHT) {-1 0}
+	[Layer] {2}
+	[Alpha] {230}
+	[Deco] {BORDER}
 	[Hidden] {yes}
 	[Sticky] {yes}
-	[Layer] {2}
 [end]
 [app] (class=URxvt)
 	[Alpha] {230}
 [end]
 [app] (class=XCalendar)
 	[Position] (TOPRIGHT) {20 20}
+	[Layer] {2}
 	[Deco] {BORDER}
 	[Hidden] {yes}
 	[Sticky] {yes}
-	[Layer] {2}
 [end]
 [app] (class=mpv)
 	[Deco] {NONE}

@@ -28,7 +28,7 @@ sh -c """sleep 1
 	windy &
 	wpa_gui -t -q -m 5 &
 	xpad -h &
-	conky -d
+	conky -d --config ~/.config/conky/conky.conf
 	syslog-notify -u
 """ &
 

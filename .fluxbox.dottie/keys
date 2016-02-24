@@ -69,6 +69,9 @@ Control Mod1 Mod4 Print :Exec screencast ~/`date +screencast-%F-%T.ogv`
 # Calendar control
 OnClock Mouse1 :ToggleCmd {Exec xcalendar} {Exec pkill xcalendar}
 
+# Toggle system monitor
+XF86Launch1 :ToggleCmd {ShowWindow (Conky)} {HideWindow (Conky)}
+
 # LCD control
 XF86MonBrightnessDown :Exec fn-backlight
 XF86MonBrightnessUp :Exec fn-backlight
