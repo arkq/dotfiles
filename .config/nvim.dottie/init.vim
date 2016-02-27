@@ -79,12 +79,13 @@ let python_highlight_all = 1
 """ settings for plug-ins
 
 let g:AutoPairsCenterLine = 0
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#disable_auto_complete = 1
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#disable_auto_complete = 1
 let g:neocomplete#enable_auto_delimiter = 1
 let g:neocomplete#enable_fuzzy_completion = 0
-let g:neocomplete#force_overwrite_completefunc = 1
 let g:airline#extensions#disable_rtp_load = 1
 
 let g:gitgutter_enabled = 0
@@ -105,7 +106,7 @@ let g:syntastic_cpp_config_file = '.clang_complete'
 
 " smart TAB completion
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" :
-	\ <SID>startswithspace() ? "\<Tab>" : neocomplete#start_manual_complete()
+	\ <SID>startswithspace() ? "\<Tab>" : Completion#start()
 inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 function! s:startswithspace()
 	let col = col('.') - 1
@@ -115,7 +116,7 @@ endfunction
 " do not insert <CR> upon item selection
 inoremap <expr><CR> <SID>customcrfunction()
 function! s:customcrfunction()
-	return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+	return pumvisible() ? Completion#stop() : "\<CR>"
 endfunction
 
 " auto-pairs workaround for buggy <CR> mapping

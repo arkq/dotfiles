@@ -31,10 +31,19 @@ if has('python')
 endif
 
 " Keyword completion system
-Plug 'Shougo/vimproc.vim'
-Plug 'Shougo/context_filetype.vim'
-Plug 'Shougo/neoinclude.vim'
-Plug 'Shougo/neocomplete.vim'
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim'
+	Plug 'zchee/deoplete-jedi'
+	let Completion#start = function('deoplete#mappings#manual_complete')
+	let Completion#stop = function('deoplete#mappings#close_popup')
+else
+	Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+	Plug 'Shougo/context_filetype.vim'
+	Plug 'Shougo/neoinclude.vim'
+	Plug 'Shougo/neocomplete.vim'
+	let Completion#start = function('neocomplete#start_manual_complete')
+	let Completion#stop = function('neocomplete#close_popup')
+endif
 
 " Syntax (compilation & code style) checker
 Plug 'scrooloose/syntastic'
