@@ -6,7 +6,7 @@ export PATH=$HOME/.fluxbox/bin:$PATH
 
 # basic X server configuration
 rundom -b -r -i 7200 -d 3600 "fbsetbg -R ~/.fluxbox/images/"
-compton -b --config ~/.config/compton.conf
+compton -b --config ~/.config/compton/compton.conf
 
 # basic application set
 xautolock -time 6 -locker "alock -b shade -c glyph -i frame" -secure &
