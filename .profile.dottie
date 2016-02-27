@@ -8,7 +8,7 @@
 export PATH=$HOME/bin:$PATH:/usr/sbin:/sbin/
 
 # python interpreter customizations
-export PYTHONSTARTUP=$HOME/.pystartup
+export PYTHONSTARTUP=$HOME/.pythonrc
 
 # use native CPU capabilities during compilation
 export CFLAGS="-march=native -mtune=native -O2 -g -pipe"

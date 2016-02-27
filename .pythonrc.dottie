@@ -1,5 +1,6 @@
 # Startup script for python which enables history and tab name completion
 # for the interpreter interactive mode.
+# vim: ft=python
 
 # import needed modules
 import atexit
@@ -8,7 +9,7 @@ import readline
 import rlcompleter
 
 # where is history saved
-historyPath = os.path.expanduser("~/.pyhistory")
+historyPath = os.path.expanduser("~/.python_history")
 
 # handler for saving history
 def save_history(historyPath=historyPath):
