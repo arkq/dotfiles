@@ -37,6 +37,10 @@ set number
 set modeline
 set mouse=a
 
+" enhanced command-line
+set wildignorecase
+set wildmenu
+
 " completion menu improvement
 set completeopt=longest,menuone
 
