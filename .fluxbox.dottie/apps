@@ -1,7 +1,7 @@
 [app] (class=Conky)
 	[Dimensions] {300 101%}
 	[Position] (RIGHT) {-1 0}
-	[Layer] {2}
+	[Layer] {1}
 	[Alpha] {230}
 	[Deco] {BORDER}
 	[Hidden] {yes}
