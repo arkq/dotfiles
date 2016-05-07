@@ -1,0 +1,5 @@
+# keys - feh keys customization
+
+# for God's sake, "F" is for fullscreen
+save_filelist
+toggle_fullscreen f
