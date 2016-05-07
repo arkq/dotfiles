@@ -1,0 +1,11 @@
+# zathurarc
+
+# adjust view for panoramic display
+set adjust-open width
+set window-width 1000
+
+# strip file path from the title
+set window-title-basename true
+
+# there is no default icon for zathura
+set window-icon /usr/share/icons/Moka/32x32/apps/xpdf.png
