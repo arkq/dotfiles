@@ -17,6 +17,10 @@ export CXXFLAGS="${CFLAGS}"
 # use full host capacity for make actions
 export MAKEFLAGS=-j$(nproc)
 
+# setup Go environment
+export GOBIN=~/unixdevel/GO/bin
+export GOPATH=~/unixdevel/GO
+
 # get rid of accessibility support
 export NO_AT_BRIDGE=1
 
