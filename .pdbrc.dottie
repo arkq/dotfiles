@@ -1,0 +1,11 @@
+# Startup script for python debugger which enables tab name completion.
+# vim: ft=python
+
+# import needed modules
+import pdb
+import rlcompleter
+
+pdb.Pdb.complete = rlcompleter.Completer(locals()).complete
+
+# cleanup
+del pdb, rlcompleter
