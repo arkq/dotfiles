@@ -9,7 +9,7 @@ URxvt*scrollBar_floating: true
 URxvt*perl-ext-common:    font-size,selection
 URxvt*keysym.C-Up:        perl:font-size:increase
 URxvt*keysym.C-Down:      perl:font-size:decrease
-URxvt*font-size.step:     2
+URxvt*font-size.step:     4
 
 CMus*iconFile:            /home/arek/.icons/hicolor/48x48/apps/cmus.png
 Irssi*iconFile:           /home/arek/.icons/hicolor/48x48/apps/irssi.png
