@@ -94,7 +94,7 @@ let g:gitgutter_escape_grep = 1
 let g:gitgutter_map_keys = 0
 
 " exclude intermediate files from the tree
-let NERDTreeIgnore = ['\.o$', '\.py[co]$']
+let NERDTreeIgnore = ['\.o$', '\.py[co]$', '^__pycache__$']
 
 " non-TAB based snippet expansion
 let g:UltiSnipsExpandTrigger = "<C-j>"
