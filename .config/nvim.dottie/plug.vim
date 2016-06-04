@@ -44,6 +44,9 @@ else
 	let Completion#start = function('neocomplete#start_manual_complete')
 	let Completion#stop = function('neocomplete#close_popup')
 endif
+if has('python')
+	Plug 'Rip-Rip/clang_complete'
+endif
 
 " Syntax (compilation & code style) checker
 Plug 'scrooloose/syntastic'
@@ -53,10 +56,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/matchit.zip'
 
-if has('python')
-	Plug 'Rip-Rip/clang_complete'
-endif
-
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'vim-scripts/python_fold', { 'for': 'python' }
 if has('python')
@@ -64,6 +63,7 @@ if has('python')
 	Plug 'fisadev/vim-isort', { 'for': 'python' }
 endif
 
+Plug 'artoj/qmake-syntax-vim'
 Plug 'vim-scripts/HTML-AutoCloseTag'
 
 call plug#end()
