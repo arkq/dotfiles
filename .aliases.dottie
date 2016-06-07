@@ -1,4 +1,5 @@
 # .aliases: bash environment pimping
+# vim: ft=sh
 
 # walk speedups and typo fixes
 alias ..='cd ..'
@@ -18,6 +19,13 @@ alias ll.='ll -d .*'
 alias o='less'
 
 alias ggrep='git grep -n'
+git-sed() {
+	if [[ $# -ne 2 ]]; then
+		echo "usage: git-sed <expression> <replacement>"
+	else
+		git grep -l "$1" |xargs sed -e "s|$1|$2|g" -i
+	fi
+}
 
 # check errors on a daily basis
 alias gcc='gcc -Wall -Wextra'
