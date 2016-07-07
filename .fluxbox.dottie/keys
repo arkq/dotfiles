@@ -66,8 +66,8 @@ Print :Exec import -window root +repage ~/`date +screenshot-%F-%T.png`
 Mod4 Print :Exec import -frame +repage ~/`date +screenshot-%F-%T.png`
 Control Mod1 Mod4 Print :Exec screencast ~/`date +screencast-%F-%T.ogv`
 
-# Calendar control
-OnClock Mouse1 :ToggleCmd {Exec xcalendar} {Exec pkill xcalendar}
+# Toggle calendar
+OnClock Mouse1 :Exec orage -t
 
 # Toggle system monitor
 XF86Launch1 :ToggleCmd {ShowWindow (Conky)} {HideWindow (Conky)}

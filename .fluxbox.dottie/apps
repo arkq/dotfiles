@@ -7,15 +7,15 @@
 	[Hidden] {yes}
 	[Sticky] {yes}
 [end]
-[app] (class=URxvt)
-	[Alpha] {230}
-[end]
-[app] (class=XCalendar)
-	[Position] (TOPRIGHT) {20 20}
+[app] (class=Orage) (title=Orage)
+	[Position] (TOPRIGHT) {117 15}
 	[Layer] {2}
 	[Deco] {BORDER}
 	[Hidden] {yes}
 	[Sticky] {yes}
+[end]
+[app] (class=URxvt)
+	[Alpha] {230}
 [end]
 [app] (class=mpv)
 	[Deco] {NONE}

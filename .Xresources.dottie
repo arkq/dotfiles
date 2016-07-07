@@ -21,16 +21,6 @@ Xautolock*cornersize:     2
 Xautolock*cornerdelay:    1
 Xautolock*cornerredelay:  2
 
-XCalendar*calendarDir:    /home/arek/.xcalendar
-XCalendar*holidayFile:    /home/arek/.xcalendar/xcalender.hol
-XCalendar*firstDay:       1
-XCalendar*daynumbers*foreground:    black
-XCalendar*daynumbers.7*foreground:  red
-XCalendar*daynumbers.14*foreground: red
-XCalendar*daynumbers.21*foreground: red
-XCalendar*daynumbers.28*foreground: red
-XCalendar*daynumbers.35*foreground: red
-
 ALock*background*shade:   50
 ALock*background*blur:    50
 ALock*background*mono:    true
