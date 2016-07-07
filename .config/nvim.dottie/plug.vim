@@ -6,6 +6,9 @@
 
 call plug#begin('~/.config/nvim/plugged')
 
+" Defaults everyone can agree on
+Plug 'tpope/vim-sensible'
+
 " Use capabilities of modern terminals
 Plug 'rainux/vim-desert-warm-256'
 
@@ -49,7 +52,11 @@ if has('python')
 endif
 
 " Syntax (compilation & code style) checker
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/syntastic'
+
+" Comment-out code as a champ
+Plug 'tpope/vim-commentary'
 
 " User-friendly brackets and quotations
 Plug 'jiangmiao/auto-pairs'
@@ -64,6 +71,7 @@ if has('python')
 endif
 
 Plug 'artoj/qmake-syntax-vim'
+Plug 'jeroenbourgois/vim-actionscript'
 Plug 'vim-scripts/HTML-AutoCloseTag'
 
 call plug#end()

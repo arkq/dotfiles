@@ -53,7 +53,6 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nnoremap <silent><C-l> :nohl<CR><C-l>
 
 " nice line wrapping
 set linebreak
@@ -125,8 +124,9 @@ imap <silent><CR> <CR><Plug>AutoPairsReturn
 
 nmap <silent><F2> :NERDTreeToggle<CR>
 nmap <silent><F3> :GitGutterToggle<CR>
-nmap <silent><F4> :Gblame<CR>
+map <silent><F4> :Gblame<CR>
 nmap <silent><F8> :TagbarToggle<CR>
+map <silent><C-_> :Commentary<CR>
 
 if !exists('g:neocomplete#force_omni_input_patterns')
 	let g:neocomplete#force_omni_input_patterns = {}
