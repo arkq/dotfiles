@@ -94,9 +94,11 @@ let g:gitgutter_map_keys = 0
 
 " exclude intermediate files from the tree
 let NERDTreeIgnore = ['\.o$', '\.py[co]$', '^__pycache__$']
+" use our fold/unfold key for tree expansion
+let NERDTreeMapActivateNode = '<space>'
 
 " non-TAB based snippet expansion
-let g:UltiSnipsExpandTrigger = "<C-j>"
+let g:UltiSnipsExpandTrigger = '<C-j>'
 
 let g:syntastic_check_on_wq = 0
 let g:syntastic_c_compiler_options = '-Wall -Wextra'
