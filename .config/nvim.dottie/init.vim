@@ -86,6 +86,7 @@ let g:neocomplete#disable_auto_complete = 1
 let g:neocomplete#enable_auto_delimiter = 1
 let g:neocomplete#enable_fuzzy_completion = 0
 let g:airline#extensions#disable_rtp_load = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
 
 let g:gitgutter_enabled = 0
 let g:gitgutter_override_sign_column_highlight = 0
