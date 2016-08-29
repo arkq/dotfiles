@@ -15,4 +15,5 @@ Get-AppxPackage -AllUsers "Microsoft.MicrosoftSolitaireCollection" | Remove-Appx
 Get-AppxPackage -AllUsers "Microsoft.Office.OneNote" | Remove-AppxPackage
 Get-AppxPackage -AllUsers "Microsoft.People" | Remove-AppxPackage
 Get-AppxPackage -AllUsers "Microsoft.SkypeApp" | Remove-AppxPackage
+Get-AppxPackage -AllUsers "Microsoft.WindowsFeedbackHub" | Remove-AppxPackage
 Get-AppxPackage -AllUsers "Microsoft.WindowsPhone" | Remove-AppxPackage
