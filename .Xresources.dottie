@@ -9,10 +9,12 @@ URxvt*scrollBar_floating: true
 URxvt*scrollTtyKeypress:  true
 URxvt*scrollTtyOutput:    false
 URxvt*scrollWithBuffer:   false
-URxvt*perl-ext-common:    font-size,selection
+URxvt*perl-ext-common:    font-size,matcher,readline,selection
 URxvt*keysym.C-Up:        perl:font-size:increase
 URxvt*keysym.C-Down:      perl:font-size:decrease
+URxvt*url-launcher:       xdg-open
 URxvt*font-size.step:     4
+URxvt*matcher.button:     1
 
 CMus*iconFile:            /home/arek/.icons/hicolor/48x48/apps/cmus.png
 Irssi*iconFile:           /home/arek/.icons/hicolor/48x48/apps/irssi.png
