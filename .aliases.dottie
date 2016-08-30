@@ -31,8 +31,6 @@ git-sed() {
 alias gcc='gcc -Wall -Wextra'
 alias g++='g++ -Wall -Wextra'
 
-alias gvim='gvim -p'
-
 # random cool stuff
 alias curl-ajax='curl -H "X-Requested-With: XMLHttpRequest"'
 alias grep-nonascii='grep -P -n "[\x80-\xFF]"'
