@@ -21,6 +21,10 @@ export MAKEFLAGS=-j$(nproc)
 export GOBIN=~/unixdevel/GO/bin
 export GOPATH=~/unixdevel/GO
 
+# always use GNU source-highlight
+export LESSCOLOR=always
+export LESSCOLORIZER=/usr/bin/src-hilite-lesspipe.sh
+
 # get rid of accessibility support
 export NO_AT_BRIDGE=1
 
