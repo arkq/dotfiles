@@ -8,5 +8,7 @@
 	sh = show
 	st = status
 	dissect = bisect
+[log]
+	decorate = auto
 [push]
 	default = simple
