@@ -1,6 +1,6 @@
 [app] (class=Conky)
-	[Dimensions] {300 101%}
-	[Position] (RIGHT) {-1 0}
+	[Dimensions] {300 100%}
+	[Position] (RIGHT) {0 0}
 	[Layer] {1}
 	[Alpha] {230}
 	[Deco] {BORDER}
@@ -13,6 +13,12 @@
 	[Deco] {BORDER}
 	[Hidden] {yes}
 	[Sticky] {yes}
+[end]
+[app] (name=Irssi)
+	[Dimensions] {100% 50%}
+	[Position] (BOTTOM) {0 0}
+	[Maximized] {horz}
+	[Workspace] {2}
 [end]
 [app] (class=URxvt)
 	[Alpha] {230}
