@@ -3,7 +3,7 @@
 directory: ~/music
 
 # load some useful plug-ins
-plugins: echonest fetchart lastgenre replaygain
+plugins: fetchart lastgenre
 
 # get rid of localized characters
 asciify_paths: yes
@@ -15,10 +15,6 @@ paths:
   comp: "!Compilations/[$original_year] $album%aunique{}/$track $title"
   default: $albumartist/[$original_year] $album%aunique{}/$track $title
   singleton: $artist/[$original_year] $title
-
-echonest:
-  convert: no
-  upload: no
 
 fetchart:
   cautious: true
