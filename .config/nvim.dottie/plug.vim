@@ -70,6 +70,7 @@ if has('python')
 	Plug 'fisadev/vim-isort', { 'for': 'python' }
 endif
 
+Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'artoj/qmake-syntax-vim'
 Plug 'jeroenbourgois/vim-actionscript'
 Plug 'vim-scripts/HTML-AutoCloseTag'
