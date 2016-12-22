@@ -23,7 +23,6 @@ sh -c """sleep 1
 	orage &
 #	parcellite &
 	pnmixer &
-#	rssguard &
 	tinymount &
 	viper-qt &
 	windy &
