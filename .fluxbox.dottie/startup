@@ -22,9 +22,9 @@ sh -c """sleep 1
 	keepassx --minimize &
 	orage &
 #	parcellite &
-	pnmixer &
 	tinymount &
 	viper-qt &
+	volumeicon &
 	windy &
 	wpa_gui -t -q -m 5 &
 	xpad -h &
