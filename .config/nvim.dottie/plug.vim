@@ -36,7 +36,7 @@ endif
 " Keyword completion system
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim'
-	Plug 'zchee/deoplete-jedi'
+	Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 	let Completion#start = function('deoplete#mappings#manual_complete')
 	let Completion#stop = function('deoplete#mappings#close_popup')
 else
@@ -72,6 +72,7 @@ endif
 
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'artoj/qmake-syntax-vim'
+Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'jeroenbourgois/vim-actionscript'
 Plug 'vim-scripts/HTML-AutoCloseTag'
 
