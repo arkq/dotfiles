@@ -1,5 +1,5 @@
 URxvt*font:               xft:Terminus:pixelsize=12
-URxvt*iconFile:           /usr/share/icons/gnome/48x48/apps/terminal.png
+URxvt*iconFile:           /usr/share/icons/Moka/48x48/apps/terminal.png
 URxvt*geometry:           120x25
 URxvt*reverseVideo:       true
 URxvt*loginShell:         false

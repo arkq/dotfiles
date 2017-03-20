@@ -1,5 +1,5 @@
 [app] (class=Conky)
-	[Dimensions] {300 100%}
+	[Dimensions] {320 100%}
 	[Position] (RIGHT) {0 0}
 	[Layer] {1}
 	[Alpha] {230}
