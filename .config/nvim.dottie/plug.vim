@@ -27,6 +27,9 @@ Plug 'vim-scripts/yaifa.vim'
 " Line and column jumper
 Plug 'kopischke/vim-fetch'
 
+" Switch between source and header
+Plug 'derekwyatt/vim-fswitch'
+
 " Bucket full of snippets
 if has('python')
 	Plug 'SirVer/ultisnips'
