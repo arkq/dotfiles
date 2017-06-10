@@ -20,6 +20,7 @@ export MAKEFLAGS=-j$(nproc)
 # setup Go environment
 export GOBIN=~/unixdevel/GO/bin
 export GOPATH=~/unixdevel/GO
+export PATH=$GOBIN:$PATH
 
 # always use GNU source-highlight
 export LESSCOLOR=always
