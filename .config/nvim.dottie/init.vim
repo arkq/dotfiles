@@ -93,6 +93,8 @@ let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_escape_grep = 1
 let g:gitgutter_map_keys = 0
 
+let g:javascript_plugin_jsdoc = 1
+
 let vim_markdown_preview_github = 1
 let vim_markdown_preview_use_xdg_open = 1
 
