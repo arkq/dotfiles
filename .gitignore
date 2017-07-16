@@ -2,9 +2,12 @@
 
 icon-theme.cache
 
+.config/mpv.dottie/watch_later/
+
 .config/nvim.dottie/autoload/
 .config/nvim.dottie/plugged/
 .config/nvim.dottie/spell/
+.config/nvim.dottie/.netrwhist
 
 .fluxbox.dottie/bin/
 .fluxbox.dottie/images/
