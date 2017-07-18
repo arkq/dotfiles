@@ -1,0 +1,37 @@
+{
+
+// Editor
+	"editor.autoIndent": true,
+	"editor.dragAndDrop": false,
+	"editor.insertSpaces": false,
+	"editor.minimap.enabled": false,
+	"editor.quickSuggestionsDelay": 250,
+	"editor.renderIndentGuides": false,
+	"editor.tabSize": 2,
+	"editor.wordWrap": "on",
+	"gitlens.blame.line.enabled": false,
+	"gitlens.codeLens.enabled": false,
+	"vim.enableNeovim": true,
+
+// Files
+	"files.autoSave": "onFocusChange",
+	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true,
+
+// Code Spell
+	"cSpell.userWords": [
+	],
+
+// Python
+	"python.linting.flake8Enabled": true,
+	"python.linting.pydocstyleEnabled": false,
+	"python.linting.pylintEnabled": false,
+
+// Misc
+	"extensions.autoUpdate": true,
+	"vim.disableAnnoyingNeovimMessage": true,
+	"window.menuBarVisibility": "toggle",
+	"workbench.colorTheme": "Monokai",
+	"workbench.iconTheme": "vs-minimal"
+
+}
