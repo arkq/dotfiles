@@ -19,7 +19,7 @@ dunst &
 sh -c """sleep 1
 	gtk3-nocsd cbatticon -n -u 30 &
 	claws-mail &
-	keepassx --minimize &
+	keepassxc &
 	orage &
 #	parcellite &
 	tinymount &
