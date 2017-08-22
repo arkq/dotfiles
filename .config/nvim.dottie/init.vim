@@ -106,6 +106,10 @@ let NERDTreeMapActivateNode = '<space>'
 " non-TAB based snippet expansion
 let g:UltiSnipsExpandTrigger = '<C-j>'
 
+" search current word on the web
+nmap <leader>g <Plug>(openbrowser-smart-search)
+vmap <leader>g <Plug>(openbrowser-smart-search)
+
 let g:syntastic_check_on_wq = 0
 let g:syntastic_c_compiler_options = '-Wall -Wextra'
 let g:syntastic_c_config_file = '.clang_complete'

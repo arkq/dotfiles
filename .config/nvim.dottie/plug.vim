@@ -66,6 +66,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/matchit.zip'
 
+" Open URI with favorite browser
+Plug 'tyru/open-browser.vim'
+
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'vim-scripts/python_fold', { 'for': 'python' }
 if has('python')
