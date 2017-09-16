@@ -9,7 +9,7 @@ URxvt*scrollBar_floating: true
 URxvt*scrollTtyKeypress:  true
 URxvt*scrollTtyOutput:    false
 URxvt*scrollWithBuffer:   false
-URxvt*perl-ext-common:    font-size,matcher,readline,selection
+URxvt*perl-ext-common:    default,-option-popup,-selection-popup,font-size,matcher
 URxvt*keysym.C-Up:        perl:font-size:increase
 URxvt*keysym.C-Down:      perl:font-size:decrease
 URxvt*url-launcher:       xdg-open
