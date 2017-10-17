@@ -12,5 +12,7 @@
 	decorate = auto
 [push]
 	default = simple
+[rebase]
+	autosquash = true
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
