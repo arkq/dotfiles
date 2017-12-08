@@ -51,7 +51,7 @@ Mod4 F10 :Maximize
 Mod4 F11 :Fullscreen
 
 # windows-like key mapping
-Mod4 q :Exec dmenu_run -f -i -fn 'xos4 Terminus:size=10' -nb black -nf white -sf white -sb '#666666'
+Mod4 q :Exec rofi -modi drun -show drun -theme dmenu-custom
 Mod4 l :Exec alock -b shade -c glyph -i frame
 Mod4 d :ToggleCmd {ShowDesktop} {DeIconify all originquiet}
 Mod4 s :StickWindow

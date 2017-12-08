@@ -1,0 +1,42 @@
+* {
+    background-color:   Black;
+    border-color:       White;
+    text-color:         White;
+    font:               "xos4 Terminus 10";
+}
+
+#window {
+    anchor:     north;
+    location:   north;
+    width:      100%;
+    padding:    1px;
+    children:   [ horibox ];
+}
+
+#horibox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
+}
+
+#prompt {
+    padding: 1px 2px;
+}
+
+#listview {
+    layout:     horizontal;
+    spacing:    1px;
+    lines:      100;
+}
+
+#entry {
+    expand:     false;
+    width:      10em;
+}
+
+#element {
+    padding: 1px 4px;
+}
+
+#element selected {
+    background-color: #666666;
+}
