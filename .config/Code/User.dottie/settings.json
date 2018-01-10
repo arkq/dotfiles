@@ -9,18 +9,38 @@
 	"editor.renderIndentGuides": false,
 	"editor.tabSize": 2,
 	"editor.wordWrap": "on",
-	"gitlens.blame.line.enabled": false,
-	"gitlens.codeLens.enabled": false,
 	"vim.enableNeovim": true,
 
 // Files
 	"files.autoSave": "onFocusChange",
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
+	"files.exclude": {
+		"**/.cache": true,
+		"**/.idea": true,
+		"**/.vscode": true,
+		"**/__pycache__": true,
+		"**/*.pyc": true,
+		"tags": true
+	},
 
 // Code Spell
 	"cSpell.userWords": [
 	],
+
+// GitLens
+	"gitlens.blame.line.enabled": false,
+	"gitlens.codeLens.enabled": false,
+	"gitlens.advanced.messages": {
+		"suppressCommitHasNoPreviousCommitWarning": false,
+		"suppressCommitNotFoundWarning": false,
+		"suppressFileNotUnderSourceControlWarning": false,
+		"suppressGitVersionWarning": false,
+		"suppressLineUncommittedWarning": false,
+		"suppressNoRepositoryWarning": false,
+		"suppressUpdateNotice": true,
+		"suppressWelcomeNotice": false
+	},
 
 // Python
 	"python.linting.flake8Enabled": true,
@@ -29,9 +49,9 @@
 
 // Misc
 	"extensions.autoUpdate": true,
-	"vim.disableAnnoyingNeovimMessage": true,
 	"window.menuBarVisibility": "toggle",
 	"workbench.colorTheme": "Monokai",
-	"workbench.iconTheme": "vs-minimal"
+	"workbench.iconTheme": "vs-minimal",
+	"workbench.startupEditor": "newUntitledFile"
 
 }
