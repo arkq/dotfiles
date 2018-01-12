@@ -18,6 +18,7 @@ dunst &
 # delayed ignition startup
 sh -c """sleep 1
 	gtk3-nocsd cbatticon -n -u 30 &
+	anki &
 	claws-mail &
 	keepassxc &
 	orage &
@@ -29,7 +30,7 @@ sh -c """sleep 1
 	wpa_gui -t -q -m 5 &
 	xpad -h &
 	conky -d --config ~/.config/conky/conky.conf
-	syslog-notify -u
+	syslog-notify -u -c 25
 """ &
 
 exec fluxbox
