@@ -31,7 +31,11 @@ git-sed() {
 alias gcc='gcc -Wall -Wextra'
 alias g++='g++ -Wall -Wextra'
 
-# random cool stuff
+# use CURL like a pro
 alias curl-ajax='curl -H "X-Requested-With: XMLHttpRequest"'
+alias curl-json='curl-ajax -H "Content-Type: application/json"'
+alias curl-auth='curl-json -H "Authorization: Bearer $JWT"'
+
+# random cool stuff
 alias grep-nonascii='grep -P -n "[\x80-\xFF]"'
 alias python-http='python -m http.server'
