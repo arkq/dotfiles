@@ -22,7 +22,7 @@ setxkbmap -option compose:lwin-altgr
 xset r rate 250 30
 
 # basic X server look & feel
-redshift -l 52:21 -t 6500:4000 -m vidmode &
+redshift -l 52:21 -t 6500:4000 -m randr &
 syndaemon -d -i 1 -R -t -k
 
 # finally start X session manager
