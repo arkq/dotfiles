@@ -3,7 +3,7 @@
 directory: ~/music
 
 # load some useful plug-ins
-plugins: fetchart lastgenre
+plugins: fetchart lastgenre lyrics mbsync
 
 # get rid of localized characters
 asciify_paths: yes
@@ -12,9 +12,10 @@ asciify_paths: yes
 art_filename: Folder
 
 paths:
-  comp: "!Compilations/[$original_year] $album%aunique{}/$track $title"
-  default: $albumartist/[$original_year] $album%aunique{}/$track $title
-  singleton: $artist/[$original_year] $title
+  default: "$albumartist/[$original_year] $album/$track $title"
+  singleton: "$artist/[$original_year] $title"
+  comp: "!Compilations/[$original_year] $album/$track $title"
+  albumtype:soundtrack: "!Soundtracks/[$original_year] $album/$track $title"
 
 fetchart:
   cautious: true

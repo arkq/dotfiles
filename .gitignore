@@ -5,6 +5,9 @@ icon-theme.cache
 .config/Code/User.dottie/workspaceStorage/
 .config/Code/User.dottie/*.backup
 
+.config/beets.dottie/library.db
+.config/beets.dottie/state.pickle
+
 .config/mpv.dottie/watch_later/
 
 .config/nvim.dottie/autoload/
