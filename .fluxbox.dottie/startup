@@ -17,8 +17,9 @@ dunst &
 
 # delayed ignition startup
 sh -c """sleep 1
-	gtk3-nocsd cbatticon -n -u 30 &
+	aero2 &
 	anki &
+	cbatticon -n -u 30 &
 	claws-mail &
 	keepassxc &
 	orage &

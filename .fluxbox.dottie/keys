@@ -52,12 +52,14 @@ Mod4 F11 :Fullscreen
 
 # windows-like key mapping
 Mod4 q :Exec rofi -modi drun -show drun -theme dmenu-custom
+XF86Search :Exec rofi -modi drun -show drun -theme dmenu-custom
 Mod4 l :Exec alock -b shade -c glyph -i frame
 Mod4 d :ToggleCmd {ShowDesktop} {DeIconify all originquiet}
 Mod4 s :StickWindow
 
 Mod1 F1 :Exec urxvtc
 Mod1 F3 :Exec urxvtc -ssc +sb -name MC -e /usr/bin/mc
+XF86Launch8 :Exec urxvtc -ssc +sb -name MC -e /usr/bin/mc
 
 Control Mod1 Escape :Exec xkill
 Control Mod1 r :Exec pkill -USR1 redshift
