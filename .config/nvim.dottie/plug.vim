@@ -21,6 +21,9 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter', { 'on': 'GitGutterToggle' }
 Plug 'tpope/vim-fugitive'
 
+" Hex editing in Vim
+Plug 'fidian/hexmode'
+
 " Indentation automatic detection
 Plug 'vim-scripts/yaifa.vim'
 
