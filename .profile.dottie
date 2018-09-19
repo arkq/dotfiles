@@ -26,6 +26,9 @@ export PATH=$GOBIN:$PATH
 export LESSCOLOR=always
 export LESSCOLORIZER=/usr/bin/src-hilite-lesspipe.sh
 
+# use custom uncrustify configuration
+export UNCRUSTIFY_CONFIG=~/.config/uncrustify/arkq.cfg
+
 # get rid of accessibility support
 export NO_AT_BRIDGE=1
 
