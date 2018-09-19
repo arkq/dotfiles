@@ -12,6 +12,7 @@ export PYTHONSTARTUP=$HOME/.pythonrc
 
 # use native CPU capabilities during compilation
 export CFLAGS="-march=native -mtune=native -O2 -g -pipe"
+export CFLAGS="${CFLAGS} -Wall -Wextra"
 export CXXFLAGS="${CFLAGS}"
 
 # use full host capacity for make actions
