@@ -22,6 +22,12 @@ export HISTIGNORE="$HISTIGNORE:ls:la:ll:l.:ll."
 export GPG_TTY=$(tty)
 
 # load our X-based pinentry GPG agent
-if [ "${DISPLAY}" ] && [ -s ~/.gpg-agent-info ]; then
+if [ -n "${DISPLAY}" ] && [ -s ~/.gpg-agent-info ]; then
 	. ~/.gpg-agent-info
+fi
+
+# start X on login
+if [ -z "${DISPLAY}" ] && [ $(tty) = /dev/tty1 ]; then
+	XSERVER="/usr/bin/X :0 -nolisten tcp vt7"
+	exec xinit -- $XSERVER >& /tmp/.xsession-errors
 fi
