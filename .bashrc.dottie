@@ -18,6 +18,18 @@ export HISTSIZE=-1
 export HISTIGNORE="history:pwd:..:..."
 export HISTIGNORE="$HISTIGNORE:ls:la:ll:l.:ll."
 
+# show git repository status in prompt
+PROMPT_CMD_PRE='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]'
+PROMPT_CMD_POST=' \[\033[01;34m\]\$\[\033[00m\] '
+PROMPT_COMMAND="__git_ps1 \"$PROMPT_CMD_PRE\" \"$PROMPT_CMD_POST\""
+source /usr/share/git/git-prompt.sh
+
+# git repository status tweaks
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWCOLORHINTS=true
+
 # required by curses-based pinentry
 export GPG_TTY=$(tty)
 
