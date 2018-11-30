@@ -5,6 +5,8 @@
 	ad = add
 	cm = commit
 	co = checkout
+	df = diff
+	dt = difftool
 	sh = show
 	st = status
 	dissect = bisect
