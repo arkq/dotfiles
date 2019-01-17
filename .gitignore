@@ -2,6 +2,7 @@
 
 icon-theme.cache
 
+.config/Code/User.dottie/globalStorage/
 .config/Code/User.dottie/workspaceStorage/
 .config/Code/User.dottie/*.backup
 

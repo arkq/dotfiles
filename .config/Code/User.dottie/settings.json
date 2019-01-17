@@ -7,13 +7,19 @@
 	"editor.minimap.enabled": false,
 	"editor.quickSuggestionsDelay": 250,
 	"editor.renderIndentGuides": false,
+	"editor.suggestSelection": "first",
+	"editor.tabCompletion": "on",
 	"editor.tabSize": 2,
 	"editor.wordWrap": "on",
+	"search.smartCase": true,
 	"vim.enableNeovim": true,
+	"vim.neovimPath": "/usr/bin/nvim",
 
 // Files
 	"files.autoSave": "onFocusChange",
+	"files.enableTrash": false,
 	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"files.exclude": {
 		"**/.cache": true,
@@ -26,10 +32,11 @@
 
 // Code Spell
 	"cSpell.userWords": [
+		"Arkadiusz",
+		"Bokowy"
 	],
 
 // GitLens
-	"gitlens.gitExplorer.enabled": false,
 	"gitlens.codeLens.enabled": false,
 	"gitlens.currentLine.enabled": false,
 	"gitlens.hovers.enabled": false,
@@ -51,9 +58,12 @@
 
 // Misc
 	"extensions.autoUpdate": true,
+	"vsintellicode.modify.editor.suggestSelection": "disabled",
 	"window.menuBarVisibility": "toggle",
+	"window.titleBarStyle": "custom",
 	"workbench.colorTheme": "Monokai",
 	"workbench.iconTheme": "vs-minimal",
-	"workbench.startupEditor": "newUntitledFile"
+	"workbench.startupEditor": "newUntitledFile",
+	"workbench.statusBar.feedback.visible": false
 
 }
