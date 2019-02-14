@@ -1,6 +1,7 @@
 {
 
 // Editor
+	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.autoIndent": true,
 	"editor.dragAndDrop": false,
 	"editor.insertSpaces": false,
@@ -40,6 +41,7 @@
 	"gitlens.codeLens.enabled": false,
 	"gitlens.currentLine.enabled": false,
 	"gitlens.hovers.enabled": false,
+	"gitlens.showWhatsNewAfterUpgrades": false,
 	"gitlens.advanced.messages": {
 		"suppressCommitHasNoPreviousCommitWarning": false,
 		"suppressCommitNotFoundWarning": false,
