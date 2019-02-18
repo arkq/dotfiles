@@ -12,9 +12,12 @@
 	dissect = bisect
 [log]
 	decorate = auto
+[pull]
+	rebase = true
 [push]
 	default = simple
 [rebase]
 	autosquash = true
+	autostash = true
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
