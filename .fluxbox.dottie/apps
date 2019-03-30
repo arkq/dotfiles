@@ -23,6 +23,3 @@
 [app] (class=URxvt)
 	[Alpha] {230}
 [end]
-[app] (class=mpv)
-	[Deco] {NONE}
-[end]
