@@ -1,5 +1,6 @@
 #!/bin/sh
 exec echo "
+	chrislajoie.vscode-modelines
 	eamodio.gitlens
 	ms-python.python
 	ms-vscode.cpptools
