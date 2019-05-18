@@ -7,13 +7,14 @@
 	co = checkout
 	df = diff
 	dt = difftool
+	pl = pull
+	pr = pull --rebase
+	s = status --short --branch
 	sh = show
 	st = status
 	dissect = bisect
 [log]
 	decorate = auto
-[pull]
-	rebase = true
 [push]
 	default = simple
 [rebase]
