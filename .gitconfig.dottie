@@ -8,7 +8,7 @@
 	df = diff
 	dt = difftool
 	pl = pull
-	pr = pull --rebase
+	pr = pull --rebase=preserve
 	s = status --short --branch
 	sh = show
 	st = status
