@@ -31,6 +31,9 @@ git-sed() {
 alias gcc='gcc -Wall -Wextra'
 alias g++='g++ -Wall -Wextra'
 
+# skip banner message
+alias gdb='gdb --quiet'
+
 # use CURL like a pro
 alias curl-ajax='curl -H "X-Requested-With: XMLHttpRequest"'
 alias curl-json='curl-ajax -H "Content-Type: application/json"'
