@@ -39,7 +39,7 @@ if [ -n "${DISPLAY}" ] && [ -s ~/.gpg-agent-info ]; then
 fi
 
 # start X on login
-if [ -z "${DISPLAY}" ] && [ $(tty) = /dev/tty1 ]; then
+if [ -z "${DISPLAY}" ] && [ "$(tty)" = /dev/tty1 ]; then
 	XSERVER="/usr/bin/X :0 -nolisten tcp vt7"
 	exec xinit -- $XSERVER >& /tmp/.xsession-errors
 fi
