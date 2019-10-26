@@ -1,5 +1,6 @@
 #!/bin/sh
 exec echo "
+	alefragnani.bookmarks
 	chrislajoie.vscode-modelines
 	eamodio.gitlens
 	ms-python.python
