@@ -23,6 +23,7 @@ Plug 'tpope/vim-fugitive'
 
 " Hex editing in Vim
 Plug 'fidian/hexmode'
+Plug 'rr-/vim-hexdec'
 
 " Indentation automatic detection
 Plug 'vim-scripts/yaifa.vim'
