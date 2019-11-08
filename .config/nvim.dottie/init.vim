@@ -80,11 +80,6 @@ let python_highlight_all = 1
 let g:AutoPairsCenterLine = 0
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#disable_auto_complete = 1
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#disable_auto_complete = 1
-let g:neocomplete#enable_auto_delimiter = 1
-let g:neocomplete#enable_fuzzy_completion = 0
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
 
@@ -119,7 +114,7 @@ let g:syntastic_python_flake8_args = '--ignore=E501,W191'
 
 " smart TAB completion
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" :
-	\ <SID>startswithspace() ? "\<Tab>" : Completion#start()
+	\ <SID>startswithspace() ? "\<Tab>" : deoplete#manual_complete()
 inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 function! s:startswithspace()
 	let col = col('.') - 1
@@ -129,7 +124,7 @@ endfunction
 " do not insert <CR> upon item selection
 inoremap <expr><CR> <SID>customcrfunction()
 function! s:customcrfunction()
-	return pumvisible() ? Completion#stop() : "\<CR>"
+	return pumvisible() ? deoplete#close_popup() : "\<CR>"
 endfunction
 
 " auto-pairs workaround for buggy <CR> mapping
@@ -143,22 +138,9 @@ nmap <silent><F8> :TagbarToggle<CR>
 map <silent><C-_> :Commentary<CR>
 map <leader>h :FSHere<CR>
 
-if !exists('g:neocomplete#force_omni_input_patterns')
-	let g:neocomplete#force_omni_input_patterns = {}
-endif
-
 " clang-based completion for C and C++
-let g:clang_complete_auto = 0
-let g:clang_auto_select = 1
-let g:clang_default_keymappings = 0
-let g:neocomplete#force_omni_input_patterns.c =
-	\ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:neocomplete#force_omni_input_patterns.cpp =
-	\ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-let g:neocomplete#force_omni_input_patterns.objc =
-	\ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)'
-let g:neocomplete#force_omni_input_patterns.objcpp =
-	\ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm/8/lib64/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm/'
 
 " jedi-based completion for Python
 let g:jedi#auto_vim_configuration = 0
@@ -166,8 +148,6 @@ let g:jedi#completions_enabled = 0
 let g:jedi#show_call_signatures = 0
 let g:jedi#smart_auto_mappings = 0
 autocmd FileType python setlocal omnifunc=jedi#completions
-let g:neocomplete#force_omni_input_patterns.python =
-	\ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
 " python automatic import sorting
 autocmd FileType python map <C-i> :Isort<CR>
