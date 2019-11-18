@@ -135,6 +135,7 @@ nmap <silent><F2> :NERDTreeToggle<CR>
 nmap <silent><F3> :GitGutterToggle<CR>
 map <silent><F4> :Gblame<CR>
 nmap <silent><F8> :TagbarToggle<CR>
+nmap <silent><C-p> :FuzzyOpen<CR>
 map <silent><C-_> :Commentary<CR>
 map <leader>h :FSHere<CR>
 

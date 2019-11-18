@@ -15,6 +15,7 @@ Plug 'rainux/vim-desert-warm-256'
 " Make Vim to be more IDE-like
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
+Plug 'cloudhead/neovim-fuzzy'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Git integration
