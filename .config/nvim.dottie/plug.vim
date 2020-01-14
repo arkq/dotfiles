@@ -12,6 +12,9 @@ Plug 'tpope/vim-sensible'
 " Use capabilities of modern terminals
 Plug 'rainux/vim-desert-warm-256'
 
+" Various handy GUI helpers
+Plug 'equalsraf/neovim-gui-shim'
+
 " Make Vim to be more IDE-like
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
