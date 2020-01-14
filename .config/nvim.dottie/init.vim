@@ -45,7 +45,7 @@ set wildmenu
 set completeopt=longest,menuone
 
 " IO latency workaround
-set updatetime=60000
+set updatetime=750
 set directory=/tmp
 
 " smart-ass search mode
