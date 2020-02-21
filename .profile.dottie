@@ -15,6 +15,10 @@ export CFLAGS="-march=native -mtune=native -O2 -g -pipe"
 export CFLAGS="${CFLAGS} -Wall -Wextra"
 export CXXFLAGS="${CFLAGS}"
 
+# enable C/C++ compilation cache
+export PATH=/usr/lib/ccache/bin:$PATH
+export GCC_COLORS=always
+
 # use full host capacity for make actions
 export MAKEFLAGS=-j$(nproc)
 
