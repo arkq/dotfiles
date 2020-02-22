@@ -5,6 +5,7 @@
 	ad = add
 	cm = commit
 	co = checkout
+	cp = cherry-pick
 	df = diff
 	dt = difftool
 	pl = pull
