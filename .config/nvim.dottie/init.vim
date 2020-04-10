@@ -88,6 +88,9 @@ let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_escape_grep = 1
 let g:gitgutter_map_keys = 0
 
+let g:Illuminate_delay = 750
+let g:Illuminate_ftblacklist = ['nerdtree']
+
 let g:javascript_plugin_jsdoc = 1
 
 let vim_markdown_preview_github = 1
@@ -140,7 +143,7 @@ map <silent><C-_> :Commentary<CR>
 map <leader>h :FSHere<CR>
 
 " clang-based completion for C and C++
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm/8/lib64/libclang.so'
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm/9/lib64/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm/'
 
 " jedi-based completion for Python

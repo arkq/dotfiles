@@ -21,6 +21,9 @@ Plug 'majutsushi/tagbar'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
+" Highlight word under cursor
+Plug 'RRethy/vim-illuminate'
+
 " Git integration
 Plug 'airblade/vim-gitgutter', { 'on': 'GitGutterToggle' }
 Plug 'tpope/vim-fugitive'
