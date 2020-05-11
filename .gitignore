@@ -13,7 +13,7 @@ icon-theme.cache
 
 .config/nvim.dottie/autoload/
 .config/nvim.dottie/plugged/
-.config/nvim.dottie/spell/
+.config/nvim.dottie/spell*
 .config/nvim.dottie/.netrwhist
 
 .fluxbox.dottie/bin/

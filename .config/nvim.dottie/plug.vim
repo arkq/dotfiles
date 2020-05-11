@@ -42,10 +42,8 @@ Plug 'kopischke/vim-fetch'
 Plug 'derekwyatt/vim-fswitch'
 
 " Bucket full of snippets
-if has('python')
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
-endif
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Keyword completion system
 Plug 'Shougo/deoplete.nvim'
@@ -69,10 +67,8 @@ Plug 'tyru/open-browser.vim'
 
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'vim-scripts/python_fold', { 'for': 'python' }
-if has('python')
-	Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-	Plug 'fisadev/vim-isort', { 'for': 'python' }
-endif
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'fisadev/vim-isort', { 'for': 'python' }
 
 Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' }
 Plug 'artoj/qmake-syntax-vim', { 'for': 'qmake' }
