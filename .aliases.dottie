@@ -21,6 +21,9 @@ alias o='less'
 # simple one-line fuzzy finder
 f() { ff() { find . -iname "*$**" ; } ; IFS="*" ff "$@" ; }
 
+# recursive grep shortcut
+alias rgrep='grep -r -n'
+
 alias ggrep='git grep -n'
 git-sed() {
 	if [[ $# -ne 2 ]]; then
