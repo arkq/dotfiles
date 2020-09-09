@@ -146,6 +146,9 @@ map <leader>h :FSHere<CR>
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm/9/lib64/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm/'
 
+" perform auto-import and formating on save
+let g:go_fmt_command = 'goimports'
+
 " jedi-based completion for Python
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#completions_enabled = 0
