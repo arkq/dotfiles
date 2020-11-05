@@ -7,6 +7,9 @@ alias ...='cd ../..'
 alias cd..='cd ..'
 alias cd-='cd -'
 
+# suppress CDPATH output
+alias cd='>/dev/null cd'
+
 alias rd='rmdir'
 alias md='mkdir -p'
 

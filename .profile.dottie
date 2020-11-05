@@ -23,9 +23,12 @@ export GCC_COLORS=always
 export MAKEFLAGS=-j$(nproc)
 
 # setup Go environment
-export GOBIN=~/unixdevel/GO/bin
-export GOPATH=~/unixdevel/GO
+export GOBIN=$HOME/unixdevel/GO/bin
+export GOPATH=$HOME/unixdevel/GO
 export PATH=$GOBIN:$PATH
+
+# directory change speedups
+export CDPATH=$HOME/unixdevel:$HOME
 
 # always use GNU source-highlight
 export LESSCOLOR=always
