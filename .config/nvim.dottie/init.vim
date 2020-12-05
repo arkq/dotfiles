@@ -95,6 +95,7 @@ let g:javascript_plugin_jsdoc = 1
 
 let vim_markdown_preview_github = 1
 let vim_markdown_preview_use_xdg_open = 1
+let g:vim_markdown_strikethrough = 1
 
 " exclude intermediate files from the tree
 let NERDTreeIgnore = ['\.o$', '\.py[co]$', '^__pycache__$']

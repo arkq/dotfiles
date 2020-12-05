@@ -65,12 +65,16 @@ Plug 'vim-scripts/matchit.zip'
 " Open URI with favorite browser
 Plug 'tyru/open-browser.vim'
 
+" Python Development Environment
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'vim-scripts/python_fold', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'fisadev/vim-isort', { 'for': 'python' }
 
+" Markdown WYSIWYG
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' }
+
 Plug 'artoj/qmake-syntax-vim', { 'for': 'qmake' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'jeroenbourgois/vim-actionscript', { 'for': 'actionscript' }
