@@ -10,6 +10,10 @@ export PATH=$HOME/bin:$PATH:/usr/sbin:/sbin/
 # python interpreter customizations
 export PYTHONSTARTUP=$HOME/.pythonrc
 
+# setup Android native development
+export NDK=$HOME/bin/opt/android-ndk-r21d
+export PATH=$PATH:$NDK/toolchains/llvm/prebuilt/linux-x86_64/bin
+
 # use native CPU capabilities during compilation
 export CFLAGS="-march=native -mtune=native -O2 -g -pipe"
 export CFLAGS="${CFLAGS} -Wall -Wextra"
@@ -28,7 +32,7 @@ export GOPATH=$HOME/unixdevel/GO
 export PATH=$GOBIN:$PATH
 
 # directory change speedups
-export CDPATH=$HOME/unixdevel:$HOME
+export CDPATH=.:$HOME/unixdevel:$HOME
 
 # always use GNU source-highlight
 export LESSCOLOR=always
