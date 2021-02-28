@@ -1,7 +1,7 @@
 [Icon Theme]
-Name=Faba-Mono
-Inherits=Faba,Moka,gnome
-Comment=Moka Overlay
+Name=Overlay
+Inherits=Adwaita,gnome
+Comment=Icons Overlay
 Directories=symbolic/apps,symbolic/status
 
 [symbolic/apps]
