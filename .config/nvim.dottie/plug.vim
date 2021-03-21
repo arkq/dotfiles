@@ -47,17 +47,17 @@ Plug 'kopischke/vim-fetch'
 " Switch between source and header
 Plug 'derekwyatt/vim-fswitch'
 
+" Integration with language servers
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
 " Bucket full of snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Keyword completion system
 Plug 'Shougo/deoplete.nvim'
-Plug 'zchee/deoplete-clang', { 'for': ['c', 'cpp'] }
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-
-" Syntax (compilation & code style) checker
-Plug 'scrooloose/syntastic'
+Plug 'lighttiger2505/deoplete-vim-lsp'
 
 " Comment-out code as a champ
 Plug 'tpope/vim-commentary'
@@ -74,6 +74,7 @@ Plug 'tyru/open-browser.vim'
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'vim-scripts/python_fold', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'fisadev/vim-isort', { 'for': 'python' }
 
 " Markdown WYSIWYG

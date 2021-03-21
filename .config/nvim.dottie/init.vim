@@ -78,10 +78,11 @@ let python_highlight_all = 1
 """ settings for plug-ins
 
 let g:AutoPairsCenterLine = 0
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#disable_auto_complete = 1
+
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
+
+let g:deoplete#enable_at_startup = 1
 
 let g:gitgutter_enabled = 0
 let g:gitgutter_override_sign_column_highlight = 0
@@ -92,6 +93,8 @@ let g:Illuminate_delay = 750
 let g:Illuminate_ftblacklist = ['nerdtree']
 
 let g:javascript_plugin_jsdoc = 1
+
+let g:lsp_document_highlight_enabled = 0
 
 let vim_markdown_preview_github = 1
 let vim_markdown_preview_use_xdg_open = 1
@@ -109,13 +112,6 @@ let g:UltiSnipsExpandTrigger = '<C-j>'
 nmap <leader>g <Plug>(openbrowser-smart-search)
 vmap <leader>g <Plug>(openbrowser-smart-search)
 
-let g:syntastic_check_on_wq = 0
-let g:syntastic_c_compiler_options = '-Wall -Wextra'
-let g:syntastic_c_config_file = '.clang_complete'
-let g:syntastic_cpp_compiler_options = '-Wall -Wextra'
-let g:syntastic_cpp_config_file = '.clang_complete'
-let g:syntastic_python_flake8_args = '--ignore=E501,W191'
-
 nmap <silent><F2> :NERDTreeToggle<CR>
 nmap <silent><F3> :GitGutterToggle<CR>
 map <silent><F4> :Gblame<CR>
@@ -126,10 +122,6 @@ map <leader>h :FSHere<CR>
 
 " do not insert newline upon item selection in pop-up
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" clang-based completion for C and C++
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm/9/lib64/libclang.so'
-let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm/'
 
 " perform auto-import and formating on save
 let g:go_fmt_command = 'goimports'
