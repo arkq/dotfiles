@@ -116,25 +116,6 @@ let g:syntastic_cpp_compiler_options = '-Wall -Wextra'
 let g:syntastic_cpp_config_file = '.clang_complete'
 let g:syntastic_python_flake8_args = '--ignore=E501,W191'
 
-" smart TAB completion
-inoremap <expr><Tab> pumvisible() ? "\<C-n>" :
-	\ <SID>startswithspace() ? "\<Tab>" : deoplete#manual_complete()
-inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-function! s:startswithspace()
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1] =~ '\s'
-endfunction
-
-" do not insert <CR> upon item selection
-inoremap <expr><CR> <SID>customcrfunction()
-function! s:customcrfunction()
-	return pumvisible() ? deoplete#close_popup() : "\<CR>"
-endfunction
-
-" auto-pairs workaround for buggy <CR> mapping
-let g:AutoPairsMapCR = 0
-imap <silent><CR> <CR><Plug>AutoPairsReturn
-
 nmap <silent><F2> :NERDTreeToggle<CR>
 nmap <silent><F3> :GitGutterToggle<CR>
 map <silent><F4> :Gblame<CR>
@@ -142,6 +123,9 @@ nmap <silent><F8> :TagbarToggle<CR>
 nmap <silent><C-p> :FuzzyOpen<CR>
 map <silent><C-_> :Commentary<CR>
 map <leader>h :FSHere<CR>
+
+" do not insert newline upon item selection in pop-up
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " clang-based completion for C and C++
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm/9/lib64/libclang.so'

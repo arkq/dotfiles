@@ -13,13 +13,19 @@ Plug 'tpope/vim-sensible'
 Plug 'rainux/vim-desert-warm-256'
 
 " Various handy GUI helpers
-Plug 'equalsraf/neovim-gui-shim'
+Plug 'equalsraf/neovim-qt', { 'rtp': 'src/gui/runtime' }
 
 " Make Vim to be more IDE-like
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" Complete anything with a TAB key
+Plug 'ackyshake/VimCompletesMe'
+
+" Whitespace highlighting
+Plug 'ntpeters/vim-better-whitespace'
 
 " Highlight word under cursor
 Plug 'RRethy/vim-illuminate'
@@ -51,7 +57,6 @@ Plug 'zchee/deoplete-clang', { 'for': ['c', 'cpp'] }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 
 " Syntax (compilation & code style) checker
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/syntastic'
 
 " Comment-out code as a champ
