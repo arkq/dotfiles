@@ -18,8 +18,15 @@
 	decorate = auto
 [push]
 	default = simple
+[pull]
+	rebase = false
 [rebase]
 	autosquash = true
 	autostash = true
+[sendemail]
+	smtpEncryption = tls
+	smtpServer = smtp.gmail.com
+	smtpUser = arkadiusz.bokowy@gmail.com
+	smtpServerPort = 587
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
