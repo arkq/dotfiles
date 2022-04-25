@@ -43,6 +43,7 @@ Plug 'vim-scripts/yaifa.vim'
 
 " Line and column jumper
 Plug 'kopischke/vim-fetch'
+Plug 'farmergreg/vim-lastplace'
 
 " Switch between source and header
 Plug 'derekwyatt/vim-fswitch'
@@ -81,10 +82,11 @@ Plug 'fisadev/vim-isort', { 'for': 'python' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' }
 
+Plug 'ilyachur/cmake4vim', { 'for': 'cmake' }
 Plug 'artoj/qmake-syntax-vim', { 'for': 'qmake' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'jeroenbourgois/vim-actionscript', { 'for': 'actionscript' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'vim-scripts/HTML-AutoCloseTag'
+Plug 'othree/xml.vim'
 
 call plug#end()

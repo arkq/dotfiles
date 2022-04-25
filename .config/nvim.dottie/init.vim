@@ -80,7 +80,7 @@ let python_highlight_all = 1
 let g:AutoPairsCenterLine = 0
 
 let g:airline#extensions#disable_rtp_load = 1
-let g:airline#extensions#whitespace#mixed_indent_algo = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
 
 let g:deoplete#enable_at_startup = 1
 
@@ -114,7 +114,7 @@ vmap <leader>g <Plug>(openbrowser-smart-search)
 
 nmap <silent><F2> :NERDTreeToggle<CR>
 nmap <silent><F3> :GitGutterToggle<CR>
-map <silent><F4> :Gblame<CR>
+map <silent><F4> :Git blame<CR>
 nmap <silent><F8> :TagbarToggle<CR>
 nmap <silent><C-p> :FuzzyOpen<CR>
 map <silent><C-_> :Commentary<CR>
