@@ -32,6 +32,9 @@ export MAKEFLAGS=-j$(nproc)
 export GOBIN=$HOME/.local/bin
 export GOPATH=$HOME/unixdevel/GO
 
+# access PlatformIO tools
+export PATH=$PATH:$HOME/.platformio/penv/bin
+
 # directory change speedups
 export CDPATH=.:$HOME/unixdevel:$HOME
 
