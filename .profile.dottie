@@ -4,8 +4,10 @@
 # load global settings
 . /etc/profile
 
-# run private and superuser tools
-export PATH=$HOME/bin:$PATH:/usr/sbin:/sbin/
+# run private tools
+export PATH=$HOME/.local/bin:$PATH
+# run superuser tools
+export PATH=$PATH:/usr/sbin:/sbin/
 
 # python interpreter customizations
 export PYTHONSTARTUP=$HOME/.pythonrc
@@ -27,9 +29,8 @@ export GCC_COLORS=always
 export MAKEFLAGS=-j$(nproc)
 
 # setup Go environment
-export GOBIN=$HOME/unixdevel/GO/bin
+export GOBIN=$HOME/.local/bin
 export GOPATH=$HOME/unixdevel/GO
-export PATH=$GOBIN:$PATH
 
 # directory change speedups
 export CDPATH=.:$HOME/unixdevel:$HOME
