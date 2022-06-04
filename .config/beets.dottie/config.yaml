@@ -3,7 +3,11 @@
 directory: ~/music
 
 # load some useful plug-ins
-plugins: fetchart lastgenre lyrics mbsync
+plugins:
+  - fetchart
+  - lyrics
+  - mbsync
+  - replaygain
 
 # get rid of localized characters
 asciify_paths: yes
@@ -24,3 +28,6 @@ fetchart:
 
 lastgenre:
   canonical: ""
+
+replaygain:
+  backend: command
