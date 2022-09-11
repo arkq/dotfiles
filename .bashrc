@@ -18,6 +18,17 @@ export HISTSIZE=-1
 export HISTIGNORE="history:pwd:..:..."
 export HISTIGNORE="$HISTIGNORE:ls:la:ll:l.:ll."
 
+# history: fuzzy reverse search
+bind -x '"\C-r": __history_fuzzy_search'
+__history_fuzzy_search() {
+	READLINE_LINE=$(
+		HISTTIMEFORMAT=
+		history | sort -rn \
+			| awk '{ $1="" ; if (!x[$0]++) print substr($0,2) }' \
+			| fzy -q "$READLINE_LINE")
+	READLINE_POINT=0x7FFFFFFF
+}
+
 # show git repository status in prompt
 PROMPT_CMD_PRE='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]'
 PROMPT_CMD_POST=' \[\033[01;34m\]\$\[\033[00m\] '
