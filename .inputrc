@@ -13,3 +13,7 @@ set show-all-if-ambiguous on
 
 # readline adblock
 set match-hidden-files off
+
+# history search with "page up" and "page down"
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
