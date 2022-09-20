@@ -1,0 +1,25 @@
+{
+	"name": "dotfiles",
+	"version": "1.0.0",
+	"publisher": "local",
+	"engines": { "vscode": "^1.0.0" },
+	"displayName": ".DOTFILES Extension Pack",
+	"description": "My Extensions for Visual Studio Code.",
+	"categories": [ "Extension Packs" ],
+	"readme": "README.md",
+	"author": { "name": "Arkadiusz Bokowy" },
+	"extensionPack": [
+		"chrislajoie.vscode-modelines",
+		"davidanson.vscode-markdownlint",
+		"eamodio.gitlens",
+		"github.copilot",
+		"ms-python.python",
+		"ms-vscode.cpptools-extension-pack",
+		"ms-vscode.go",
+		"ms-vscode.hexeditor",
+		"naturallucky.googlesearch",
+		"streetsidesoftware.code-spell-checker",
+		"timonwong.shellcheck",
+		"vscodevim.vim"
+	]
+}
