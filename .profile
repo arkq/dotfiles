@@ -23,7 +23,7 @@ export CXXFLAGS="${CFLAGS}"
 
 # enable C/C++ compilation cache
 export PATH=/usr/lib/ccache/bin:$PATH
-export GCC_COLORS=always
+export GCC_COLORS=auto
 
 # use full host capacity for make actions
 export MAKEFLAGS=-j$(nproc)
@@ -38,9 +38,8 @@ export PATH=$PATH:$HOME/.platformio/penv/bin
 # directory change speedups
 export CDPATH=.:$HOME/unixdevel:$HOME
 
-# always use GNU source-highlight
-export LESSCOLOR=always
-export LESSCOLORIZER=/usr/bin/src-hilite-lesspipe.sh
+# show ANSI colors in less
+export LESS="-R"
 
 # use custom uncrustify configuration
 export UNCRUSTIFY_CONFIG=~/.config/uncrustify/arkq.cfg

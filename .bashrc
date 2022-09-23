@@ -41,6 +41,10 @@ export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWCOLORHINTS=true
 
+# display more with less
+command -v lesspipe > /dev/null && eval "$(SHELL=/bin/sh lesspipe)"
+export LESSCOLORIZER=/usr/bin/src-hilite-lesspipe.sh
+
 # required by curses-based pinentry
 export GPG_TTY=$(tty)
 

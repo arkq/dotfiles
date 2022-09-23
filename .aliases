@@ -10,6 +10,10 @@ alias cd-='cd -'
 # suppress CDPATH output
 alias cd='>/dev/null cd'
 
+# emit colorized output
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+
 alias rd='rmdir'
 alias md='mkdir -p'
 
