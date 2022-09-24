@@ -1,23 +1,32 @@
 {
-
-// Editor
+	// Editor
 	"diffEditor.ignoreTrimWhitespace": false,
-	"editor.autoIndent": true,
 	"editor.dragAndDrop": false,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.guides.indentation": false,
 	"editor.insertSpaces": false,
 	"editor.minimap.enabled": false,
 	"editor.quickSuggestionsDelay": 250,
 	"editor.renderFinalNewline": false,
-	"editor.renderIndentGuides": false,
-	"editor.suggestSelection": "first",
+	"editor.rulers": [
+		80,
+		100,
+		120,
+		140,
+		160,
+		180,
+		200
+	],
+	"editor.suggestSelection": "recentlyUsedByPrefix",
 	"editor.tabCompletion": "on",
 	"editor.tabSize": 2,
 	"editor.wordWrap": "on",
 	"search.smartCase": true,
 	"vim.enableNeovim": true,
-	"vim.neovimPath": "/usr/bin/nvim",
-
-// Files
+	"vim.hlsearch": true,
+	"vim.visualstar": true,
+	// Files
 	"files.autoSave": "onFocusChange",
 	"files.enableTrash": false,
 	"files.insertFinalNewline": true,
@@ -31,14 +40,14 @@
 		"**/*.pyc": true,
 		"tags": true
 	},
-
-// Code Spell
+	// Code Spell
+	"cSpell.maxNumberOfProblems": 1000,
+	"cSpell.maxDuplicateProblems": 100,
 	"cSpell.userWords": [
 		"Arkadiusz",
 		"Bokowy"
 	],
-
-// GitLens
+	// GitLens
 	"gitlens.codeLens.enabled": false,
 	"gitlens.currentLine.enabled": false,
 	"gitlens.hovers.enabled": false,
@@ -53,20 +62,17 @@
 		"suppressUpdateNotice": true,
 		"suppressWelcomeNotice": false
 	},
-
-// Python
+	// C/C++
+	"C_Cpp.experimentalFeatures": "Enabled",
+	// Python
 	"python.linting.flake8Enabled": true,
 	"python.linting.pydocstyleEnabled": false,
 	"python.linting.pylintEnabled": false,
-
-// Misc
-	"extensions.autoUpdate": true,
-	"update.mode": "none",
+	// Misc
 	"vsintellicode.modify.editor.suggestSelection": "disabled",
 	"window.menuBarVisibility": "toggle",
 	"workbench.colorTheme": "Monokai",
 	"workbench.iconTheme": "vs-minimal",
 	"workbench.startupEditor": "none",
 	"workbench.statusBar.feedback.visible": false
-
 }
