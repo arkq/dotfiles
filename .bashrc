@@ -6,6 +6,9 @@
 # here, since multilingual X sessions would not work properly if LANG is over-
 # ridden in every subshell.
 
+# make sure we are in the interactive mode
+[[ $- != *i* ]] && return
+
 test -s ~/.profile && . ~/.profile || true
 test -s ~/.aliases && . ~/.aliases || true
 
@@ -18,8 +21,16 @@ export HISTSIZE=-1
 export HISTIGNORE="history:pwd:..:..."
 export HISTIGNORE="$HISTIGNORE:ls:la:ll:l.:ll."
 
+# colorize ls output
+command -v dircolors > /dev/null && eval "$(dircolors -b)"
+
+# display more with less
+command -v lesspipe > /dev/null && eval "$(SHELL=/bin/sh lesspipe)"
+export LESSCOLORIZER=/usr/bin/src-hilite-lesspipe.sh
+
 # history: fuzzy reverse search
-bind -x '"\C-r": __history_fuzzy_search'
+command -v fzy > /dev/null \
+	&& bind -x '"\C-r": __history_fuzzy_search'
 __history_fuzzy_search() {
 	READLINE_LINE=$(
 		HISTTIMEFORMAT=
@@ -29,21 +40,21 @@ __history_fuzzy_search() {
 	READLINE_POINT=0x7FFFFFFF
 }
 
-# show git repository status in prompt
-PROMPT_CMD_PRE='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]'
-PROMPT_CMD_POST=' \[\033[01;34m\]\$\[\033[00m\] '
-PROMPT_COMMAND="__git_ps1 \"$PROMPT_CMD_PRE\" \"$PROMPT_CMD_POST\""
-source /usr/share/git/git-prompt.sh
-
-# git repository status tweaks
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWSTASHSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-export GIT_PS1_SHOWCOLORHINTS=true
-
-# display more with less
-command -v lesspipe > /dev/null && eval "$(SHELL=/bin/sh lesspipe)"
-export LESSCOLORIZER=/usr/bin/src-hilite-lesspipe.sh
+# setup adaptive prompt
+if [ -f /usr/share/liquidprompt/liquidprompt ]; then
+	source /usr/share/liquidprompt/liquidprompt
+elif [ -f /usr/share/git/git-prompt.sh ]; then
+	# git repository status tweaks
+	export GIT_PS1_SHOWDIRTYSTATE=true
+	export GIT_PS1_SHOWSTASHSTATE=true
+	export GIT_PS1_SHOWUNTRACKEDFILES=true
+	export GIT_PS1_SHOWCOLORHINTS=true
+	# show git repository status in prompt
+	PROMPT_CMD_PRE='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]'
+	PROMPT_CMD_POST=' \[\033[01;34m\]\$\[\033[00m\] '
+	PROMPT_COMMAND="__git_ps1 \"$PROMPT_CMD_PRE\" \"$PROMPT_CMD_POST\""
+	source /usr/share/git/git-prompt.sh
+fi
 
 # required by curses-based pinentry
 export GPG_TTY=$(tty)
