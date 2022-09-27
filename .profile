@@ -1,9 +1,6 @@
 # This file is read each time a login shell is started.
 # All other interactive shells will read .bashrc only.
 
-# load global settings
-. /etc/profile
-
 # run private tools
 export PATH=$HOME/.local/bin:$PATH
 # run superuser tools
@@ -49,3 +46,6 @@ export NO_AT_BRIDGE=1
 
 # define our X session type
 export XSESSION=fluxbox
+
+# load bash settings for login shell as well
+[ -n "$BASH" ] && . $HOME/.bashrc

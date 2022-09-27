@@ -9,8 +9,8 @@
 # make sure we are in the interactive mode
 [[ $- != *i* ]] && return
 
-test -s ~/.profile && . ~/.profile || true
-test -s ~/.aliases && . ~/.aliases || true
+# load custom bash aliases
+[ -s ~/.aliases ] && source ~/.aliases
 
 # history: ignore duplicates and skip whitespace
 export HISTCONTROL=ignoreboth
