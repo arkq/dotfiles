@@ -9,7 +9,7 @@
 	df = diff
 	dt = difftool
 	pl = pull
-	pr = pull --rebase=preserve
+	pr = pull --rebase=merges
 	s = status --short --branch
 	sh = show
 	st = status
