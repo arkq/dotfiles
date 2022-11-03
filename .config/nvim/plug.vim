@@ -30,6 +30,9 @@ Plug 'ntpeters/vim-better-whitespace'
 " Highlight word under cursor
 Plug 'RRethy/vim-illuminate'
 
+" Search for pattern globally
+Plug 'jremmen/vim-ripgrep'
+
 " Git integration
 Plug 'airblade/vim-gitgutter', { 'on': 'GitGutterToggle' }
 Plug 'tpope/vim-fugitive'

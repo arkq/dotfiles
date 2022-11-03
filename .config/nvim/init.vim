@@ -112,6 +112,10 @@ let g:UltiSnipsExpandTrigger = '<C-j>'
 nmap <leader>g <Plug>(openbrowser-smart-search)
 vmap <leader>g <Plug>(openbrowser-smart-search)
 
+" search current word in subdirectories
+nmap <leader>f :Ggrep! -q <cword><CR>
+nmap <leader>F :Rg <cword><CR>
+
 nmap <silent><F2> :NERDTreeToggle<CR>
 nmap <silent><F3> :GitGutterToggle<CR>
 map <silent><F4> :Git blame<CR>
