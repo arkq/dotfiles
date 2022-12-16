@@ -63,6 +63,9 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
 Plug 'lighttiger2505/deoplete-vim-lsp'
 
+" Everyone needs a substitute sometimes
+Plug 'github/copilot.vim'
+
 " Comment-out code as a champ
 Plug 'tpope/vim-commentary'
 
