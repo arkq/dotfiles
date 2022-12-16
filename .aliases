@@ -59,4 +59,4 @@ alias vscode='vscode --goto'
 
 # random cool stuff
 alias grep-nonascii='grep -P -n "[\x80-\xFF]"'
-alias python-http='python -m http.server'
+alias python3-http='python3 -m http.server'
