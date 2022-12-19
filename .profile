@@ -24,6 +24,7 @@ export GCC_COLORS=auto
 
 # use full host capacity for make actions
 export MAKEFLAGS=-j$(nproc)
+export NINJAFLAGS=-j$(nproc)
 
 # setup Go environment
 export GOBIN=$HOME/.local/bin

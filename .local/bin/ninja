@@ -1,0 +1,3 @@
+#!/bin/sh
+# https://github.com/michaelforney/samurai/issues/15
+exec /usr/bin/ninja $NINJAFLAGS "$@"
