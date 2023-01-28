@@ -25,7 +25,8 @@ export HISTIGNORE="$HISTIGNORE:ls:la:ll:l.:ll."
 command -v dircolors > /dev/null && eval "$(dircolors -b)"
 
 # display more with less
-command -v lesspipe > /dev/null && eval "$(SHELL=/bin/sh lesspipe)"
+command -v lesspipe > /dev/null \
+	&& export LESSOPEN="|lesspipe %s" LESSCLOSE="lesspipe %s %s"
 export LESSCOLORIZER=/usr/bin/src-hilite-lesspipe.sh
 
 # history: fuzzy reverse search
