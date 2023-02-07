@@ -81,6 +81,7 @@ let g:AutoPairsCenterLine = 0
 
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
+let g:airline_detect_spell = 0
 
 let g:deoplete#enable_at_startup = 1
 
@@ -108,6 +109,10 @@ let NERDTreeMapActivateNode = '<space>'
 " non-TAB based snippet expansion
 let g:UltiSnipsExpandTrigger = '<C-j>'
 
+" keep Copilot disabled by default
+let b:copilot_enabled = 0
+nmap <leader>C :let b:copilot_enabled = !b:copilot_enabled<CR>
+
 " search current word on the web
 nmap <leader>g <Plug>(openbrowser-smart-search)
 vmap <leader>g <Plug>(openbrowser-smart-search)
@@ -127,7 +132,7 @@ map <leader>h :FSHere<CR>
 " do not insert newline upon item selection in pop-up
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" perform auto-import and formating on save
+" perform auto-import and formatting on save
 let g:go_fmt_command = 'goimports'
 
 " jedi-based completion for Python
