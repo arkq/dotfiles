@@ -40,7 +40,7 @@ export CDPATH=.:$HOME/unixdevel:$HOME
 export LESS="-R"
 
 # use custom uncrustify configuration
-export UNCRUSTIFY_CONFIG=~/.config/uncrustify/arkq.cfg
+export UNCRUSTIFY_CONFIG=~/.config/uncrustify/default.cfg
 
 # get rid of accessibility support
 export NO_AT_BRIDGE=1
