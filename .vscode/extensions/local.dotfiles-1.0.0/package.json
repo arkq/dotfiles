@@ -10,6 +10,7 @@
 	"author": { "name": "Arkadiusz Bokowy" },
 	"extensionPack": [
 		"chrislajoie.vscode-modelines",
+		"christian-kohler.path-intellisense",
 		"davidanson.vscode-markdownlint",
 		"eamodio.gitlens",
 		"github.copilot",
