@@ -1,0 +1,4 @@
+# ripgrep: global ignore list
+
+# omit .git directory when used with --hidden
+.git/

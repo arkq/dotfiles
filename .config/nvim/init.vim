@@ -85,6 +85,8 @@ let g:airline_detect_spell = 0
 
 let g:deoplete#enable_at_startup = 1
 
+let g:fuzzy_hidden = 1
+
 let g:gitgutter_enabled = 0
 let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_escape_grep = 1
