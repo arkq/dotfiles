@@ -40,7 +40,7 @@ export CDPATH=.:$HOME/unixdevel:$HOME
 export LESS="-R"
 
 # use custom uncrustify configuration
-export UNCRUSTIFY_CONFIG=~/.config/uncrustify/default.cfg
+export UNCRUSTIFY_CONFIG=$HOME/.config/uncrustify/default.cfg
 
 # get rid of accessibility support
 export NO_AT_BRIDGE=1
@@ -48,5 +48,11 @@ export NO_AT_BRIDGE=1
 # define our X session type
 export XSESSION=fluxbox
 
+# load private configuration
+if [ -s ~/.shadow ]; then
+	# load if the file is unlocked
+	head -c 10 ~/.shadow | grep -q "GITCRYPT" || . ~/.shadow
+fi
+
 # load bash settings for login shell as well
-[ -n "$BASH" ] && . $HOME/.bashrc
+[ -n "$BASH" ] && . ~/.bashrc
