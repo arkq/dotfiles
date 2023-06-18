@@ -6,7 +6,7 @@ export PATH=$HOME/.local/bin:$PATH
 # run superuser tools
 export PATH=$PATH:/usr/sbin:/sbin/
 
-# python interpreter customizations
+# python interpreter customization
 export PYTHONSTARTUP=$HOME/.pythonrc
 
 # setup Android native development
@@ -28,13 +28,13 @@ export NINJAFLAGS=-j$(nproc)
 
 # setup Go environment
 export GOBIN=$HOME/.local/bin
-export GOPATH=$HOME/unixdevel/GO
+export GOPATH=$HOME/Documents/GO
 
 # access PlatformIO tools
 export PATH=$PATH:$HOME/.platformio/penv/bin
 
 # directory change speedups
-export CDPATH=.:$HOME/unixdevel:$HOME
+export CDPATH=.:$HOME/Documents:$HOME
 
 # show ANSI colors in less
 export LESS="-R"
