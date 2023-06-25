@@ -36,6 +36,10 @@ export PATH=$PATH:$HOME/.platformio/penv/bin
 # directory change speedups
 export CDPATH=.:$HOME/Documents:$HOME
 
+# prevent esoteric editors being spawned
+export EDITOR=vi
+export VISUAL=vi
+
 # show ANSI colors in less
 export LESS="-R"
 
