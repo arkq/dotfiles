@@ -15,7 +15,7 @@
 # history: ignore duplicates and skip whitespace
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT='%F %r  '
-export HISTFILESIZE=5000
+export HISTFILESIZE=100000
 export HISTSIZE=-1
 # do not store garbage/irrelevant commands
 export HISTIGNORE="history:pwd:..:..."
