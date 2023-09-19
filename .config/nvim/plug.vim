@@ -79,6 +79,7 @@ Plug 'tyru/open-browser.vim'
 
 " Python Development Environment
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'vim-python/python-syntax', { 'for': 'python' }
 Plug 'vim-scripts/python_fold', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
