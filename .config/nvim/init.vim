@@ -28,7 +28,7 @@ set diffopt+=vertical
 
 set spell
 set spelllang=en_us
-set spellfile=~/.vim/spell.add
+set spellfile=~/.config/nvim/spell.add
 nnoremap <F7> :setlocal spell! spell?<CR>
 
 set pastetoggle=<F12>
