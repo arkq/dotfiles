@@ -22,6 +22,9 @@ export CXXFLAGS="${CFLAGS}"
 export PATH=/usr/lib/ccache/bin:$PATH
 export GCC_COLORS=auto
 
+# always generate compile commands
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
+
 # use full host capacity for make actions
 export MAKEFLAGS=-j$(nproc)
 export NINJAFLAGS=-j$(nproc)
