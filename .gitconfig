@@ -27,6 +27,8 @@
 [rebase]
 	autosquash = true
 	autostash = true
+[receive]
+	denyCurrentBranch = updateInstead
 [sendemail]
 	smtpEncryption = tls
 	smtpServer = smtp.gmail.com
