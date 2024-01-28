@@ -27,6 +27,9 @@
 	"vim.enableNeovim": true,
 	"vim.hlsearch": true,
 	"vim.visualstar": true,
+	"vim.handleKeys": {
+		"<C-p>": false
+	},
 	// Files
 	"files.autoSave": "onFocusChange",
 	"files.enableTrash": false,
