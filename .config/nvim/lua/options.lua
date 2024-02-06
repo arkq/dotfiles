@@ -58,8 +58,3 @@ vim.keymap.set("n", "<space>", "za")
 -- Splits tweaks
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-
--- Syntax tweaks
-vim.g.c_space_errors = 1
-vim.g.python_space_errors = 1
-vim.g.python_highlight_all = 1

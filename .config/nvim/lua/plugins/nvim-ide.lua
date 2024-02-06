@@ -1,11 +1,11 @@
 return {
 
-	{ "bling/vim-airline",
-		init = function()
-			vim.g["airline#extensions#disable_rtp_load"] = 1
-			vim.g["airline#extensions#whitespace#mixed_indent_algo"] = 2
-			vim.g.airline_detect_spell = 0
-		end },
+	{ "nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			sections = { lualine_x = { "encoding", "filetype" } },
+			extensions = { "fugitive", "nvim-tree", "quickfix" },
+		} },
 
 	{ "nvim-tree/nvim-tree.lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },

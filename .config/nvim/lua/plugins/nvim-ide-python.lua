@@ -1,6 +1,5 @@
 return {
 	{ "hynek/vim-python-pep8-indent", ft = "python" },
-	{ "vim-python/python-syntax", ft = "python" },
 	{ "vim-scripts/python_fold", ft = "python" },
 	{ "davidhalter/jedi-vim", ft = "python",
 		init = function()

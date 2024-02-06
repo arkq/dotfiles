@@ -22,8 +22,8 @@ require("lazy").setup({
 		-- Defaults everyone can agree on
 		{ "tpope/vim-sensible", priority = 1000 },
 		-- Use color capabilities of modern terminals
-		{ "rainux/vim-desert-warm-256",
-			config = function() vim.cmd("colorscheme desert-warm-256") end },
+		{ "tanvirtin/monokai.nvim", priority = 1100,
+			opts = {} },
 		-- Load plug-ins from the lua/plugins directory
 		{ import = "plugins" },
 	},
