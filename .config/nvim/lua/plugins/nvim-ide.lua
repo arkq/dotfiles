@@ -1,11 +1,25 @@
+local function gps()
+	return require("nvim-gps").get_location()
+end
+
+local function gps_is_available()
+	return require("nvim-gps").is_available()
+end
+
 return {
 
 	{ "nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {
-			sections = { lualine_x = { "encoding", "filetype" } },
+			sections = {
+				lualine_c = { "filename", { gps, cond = gps_is_available } },
+				lualine_x = { "encoding", "filetype" } },
 			extensions = { "fugitive", "nvim-tree", "quickfix" },
 		} },
+
+	-- Breadcrumbs based on treesitter
+	{ "SmiteshP/nvim-gps",
+		opts = { disable_icons = true } },
 
 	{ "nvim-tree/nvim-tree.lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },

@@ -18,6 +18,7 @@ vim.g.mapleader = ","
 
 -- Setup and load plug-ins
 require("lazy").setup({
+	change_detection = { enabled = false },
 	spec = {
 		-- Defaults everyone can agree on
 		{ "tpope/vim-sensible", priority = 1000 },
