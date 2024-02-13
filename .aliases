@@ -53,6 +53,7 @@ alias gdb='gdb --quiet'
 alias curl-ajax='curl -H "X-Requested-With: XMLHttpRequest"'
 alias curl-json='curl-ajax -H "Content-Type: application/json"'
 alias curl-auth='curl-json -H "Authorization: Bearer $JWT"'
+alias curl-ws='curl -H "Connection: Upgrade" -H "Upgrade: websocket"'
 
 # use line and column jumper
 alias vscode='vscode --goto'
