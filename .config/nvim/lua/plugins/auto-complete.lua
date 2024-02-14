@@ -5,5 +5,5 @@ return {
 		init = function()
 			vim.g["deoplete#enable_at_startup"] = 1
 		end },
-	{ "lighttiger2505/deoplete-vim-lsp" },
+	{ "deoplete-plugins/deoplete-lsp" },
 }
