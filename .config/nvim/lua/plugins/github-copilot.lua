@@ -1,8 +1,11 @@
 return {
-	{ "github/copilot.vim",
-		keys = {{ "<leader>C", ":let b:copilot_enabled = !b:copilot_enabled<CR>", silent = true }},
-		init = function()
+	{ "zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		keys = {{ "<leader>C", ":Copilot! toggle<CR>", silent = true }},
+		opts = {
+			panel = { enable = false },
+			suggestion = { auto_trigger = true },
 			-- Keep Copilot disabled by default
-			vim.b.copilot_enabled = 0
-		end },
+			filetypes = { ["*"] = false },
+		} },
 }

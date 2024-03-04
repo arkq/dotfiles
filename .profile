@@ -40,8 +40,8 @@ export PATH=$PATH:$HOME/.platformio/penv/bin
 export CDPATH=.:$HOME/Documents:$HOME
 
 # prevent esoteric editors being spawned
-export EDITOR=vi
-export VISUAL=vi
+export EDITOR=nvim
+export VISUAL=nvim
 
 # show ANSI colors in less
 export LESS="-R"

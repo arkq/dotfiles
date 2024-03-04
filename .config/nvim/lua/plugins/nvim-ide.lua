@@ -9,11 +9,13 @@ end
 return {
 
 	{ "nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = {
+			"AndreM222/copilot-lualine",
+			"nvim-tree/nvim-web-devicons" },
 		opts = {
 			sections = {
 				lualine_c = { "filename", { gps, cond = gps_is_available } },
-				lualine_x = { "encoding", "filetype" } },
+				lualine_x = { "copilot", "encoding", "filetype" } },
 			extensions = { "fugitive", "nvim-tree", "quickfix" },
 		} },
 
