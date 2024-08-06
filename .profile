@@ -6,6 +6,9 @@ export PATH=$HOME/.local/bin:$PATH
 # run superuser tools
 export PATH=$PATH:/usr/sbin:/sbin/
 
+# access private libraries
+export LD_LIBRARY_PATH=$HOME/.local/lib
+
 # python interpreter customization
 export PYTHONSTARTUP=$HOME/.pythonrc
 
