@@ -4,6 +4,7 @@ return {
 		tag = "v0.8.5.2",
 		build = ":TSUpdate",
 		config = function () require("nvim-treesitter.configs").setup({
+			auto_install = true,
 			ensure_installed = { "c", "cpp", "lua", "python" },
 			highlight = { enable = true },
 		}) end,
