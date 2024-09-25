@@ -1,3 +1,6 @@
+# print directly on terminal
+set terminal sixelgd truecolor size 1200,630
+
 # use standard CSV file format by default
 set datafile separator ","
 
