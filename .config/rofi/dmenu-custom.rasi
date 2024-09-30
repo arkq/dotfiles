@@ -2,7 +2,7 @@
     background-color:   Black;
     border-color:       White;
     text-color:         White;
-    font:               "xos4 Terminus 10";
+    font:               "Hack Nerd Font 10";
 }
 
 #window {
