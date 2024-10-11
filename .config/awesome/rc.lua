@@ -1,3 +1,6 @@
+-- Awesome WM configuration
+-- vim: expandtab:sw=4:ts=8:sts=4
+
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -12,7 +15,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
-local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -51,9 +53,9 @@ beautiful.notification_icon_size = 48
 beautiful.tasklist_plain_task_name = true
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvtc"
-editor = os.getenv("EDITOR") or "vi"
-editor_cmd = terminal .. " -e " .. editor
+local terminal = "urxvtc"
+local editor = os.getenv("EDITOR") or "vi"
+local editor_cmd = terminal .. " -e " .. editor
 
 -- Implementation of some common WM functionalities
 local function launcher()
@@ -68,7 +70,7 @@ end
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
+local modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -83,32 +85,10 @@ awful.layout.layouts = {
 }
 -- }}}
 
--- {{{ Menu
--- Create a launcher widget and a main menu
-myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
-}
-
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
-                        })
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
-
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}
-
 -- {{{ Wibar
 -- Create a textclock widget
 local mytextclock = wibox.widget.textclock()
-require("widget-calendar")():attach(mytextclock)
+require("widgets/calendar")(mytextclock)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -152,11 +132,16 @@ local myvseparator = wibox.widget.separator({
 })
 
 local mysystray = wibox.widget.systray()
-
-local mysensors = require("widget-sensors")()
-local mybattery = require("widget-battery")()
-local mybacklight = require("widget-backlight")()
-local mytouchpad = require("widget-touchpad")({ enabled = true })
+local mysensors = require("widgets/sensors")()
+local mybattery = require("widgets/battery")()
+local mybacklight = require("widgets/backlight")()
+local mytouchpad = require("widgets/touchpad")({ enabled = true })
+local mypowermenu = require("widgets/powermenu")({
+    cb_lock_screen = locker,
+    cb_system_suspend = function() awful.spawn("loginctl suspend") end,
+    cb_system_restart = function() awful.spawn("loginctl reboot") end,
+    cb_system_poweroff = function() awful.spawn("loginctl poweroff") end,
+})
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -202,7 +187,6 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
@@ -218,6 +202,8 @@ awful.screen.connect_for_each_screen(function(s)
             mybacklight.widget,
             myvseparator,
             mytouchpad.widget,
+            myvseparator,
+            mypowermenu.widget,
             myvseparator,
             mytextclock,
             s.mylayoutbox,
@@ -235,7 +221,7 @@ root.buttons(gears.table.join(
 -- }}}
 
 -- {{{ Key bindings
-globalkeys = gears.table.join(
+local globalkeys = gears.table.join(
 
     -- System shortcuts
     awful.key({ modkey,           }, "h",      hotkeys_popup.show_help,
@@ -319,7 +305,7 @@ globalkeys = gears.table.join(
 
 )
 
-clientkeys = gears.table.join(
+local clientkeys = gears.table.join(
     awful.key({ modkey,           }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
@@ -417,7 +403,7 @@ globalkeys = gears.table.join(globalkeys,
     awful.key({ modkey }, "Escape", awful.tag.history.restore)
 )
 
-clientbuttons = gears.table.join(
+local clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c)
         c:emit_signal("request::activate", "mouse_click", {raise = true})
     end),

@@ -32,13 +32,15 @@ end
 -- calendar popup widget
 ------------------------------------------
 
-local calendar = {}
+local widget = {}
 
-function calendar:new(args)
-    return setmetatable({}, {__index = self}):init(args or {})
+function widget:new(parent, args)
+    local callendar = setmetatable({}, {__index = self}):init(args or {})
+    callendar:attach(parent)
+    return callendar
 end
 
-function calendar:init(args)
+function widget:init(args)
     self.num_lines   = 0
     self.today_color = args.today_color or "#00ff00"
     -- first day of week: monday=1, …, sunday=7
@@ -60,11 +62,11 @@ function calendar:init(args)
     return self
 end
 
-function calendar:day_style(day_of_week)
+function widget:day_style(day_of_week)
     return self.days_style[day_of_week] or '%s'
 end
 
-function calendar:page(month, year)
+function widget:page(month, year)
 
     local today = format_date(self.day_id)
 
@@ -121,11 +123,11 @@ function calendar:page(month, year)
     return title, self.html:format(page)
 end
 
-function calendar:switch(months)
+function widget:switch(months)
     self:show(self.year, self.month+months)
 end
 
-function calendar:show(year, month)
+function widget:show(year, month)
     local today = os.time()
     self.month  = month or os.date('%m', today)
     self.year   = year  or os.date('%Y', today)
@@ -151,7 +153,7 @@ function calendar:show(year, month)
     end
 end
 
-function calendar:hide()
+function widget:hide()
     if self.notification then
         naughty.destroy(self.notification)
         self.notification = nil
@@ -159,11 +161,12 @@ function calendar:hide()
     end
 end
 
-function calendar:attach(widget)
+function widget:attach(widget)
     widget:connect_signal('mouse::enter', function() self:show() end)
     widget:connect_signal('mouse::leave', function() self:hide() end)
     widget:buttons(awful.util.table.join(
         awful.button({         }, 1, function() self:switch( -1) end),
+        awful.button({         }, 2, function() self:show() end),
         awful.button({         }, 3, function() self:switch(  1) end),
         awful.button({         }, 4, function() self:switch( -1) end),
         awful.button({         }, 5, function() self:switch(  1) end),
@@ -174,6 +177,6 @@ function calendar:attach(widget)
     ))
 end
 
-return setmetatable(calendar, {
-    __call = calendar.new,
+return setmetatable(widget, {
+    __call = widget.new,
 })

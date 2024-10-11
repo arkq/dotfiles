@@ -56,7 +56,7 @@ export UNCRUSTIFY_CONFIG=$HOME/.config/uncrustify/default.cfg
 export NO_AT_BRIDGE=1
 
 # define our X session type
-export XSESSION=fluxbox
+export XSESSION=awesome
 
 # load private configuration
 if [ -s ~/.shadow ]; then
