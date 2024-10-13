@@ -8,6 +8,11 @@ end
 
 return {
 
+	-- IDE-like session manager
+	{ "rmagatti/auto-session",
+		lazy = false, -- Load it on startup
+		opts = {} },
+
 	{ "nvim-lualine/lualine.nvim",
 		dependencies = {
 			"AndreM222/copilot-lualine",
