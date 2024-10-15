@@ -132,6 +132,7 @@ local myvseparator = wibox.widget.separator({
 })
 
 local mysystray = wibox.widget.systray()
+local mycpu = require("widgets/cpu")()
 local mysensors = require("widgets/sensors")()
 local mybattery = require("widgets/battery")()
 local mybacklight = require("widgets/backlight")()
@@ -194,6 +195,8 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             mysystray,
+            myvseparator,
+            mycpu.widget,
             myvseparator,
             mysensors.widget,
             myvseparator,
