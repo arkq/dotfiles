@@ -137,6 +137,7 @@ local mysensors = require("widgets/sensors")()
 local mybattery = require("widgets/battery")()
 local mybacklight = require("widgets/backlight")()
 local mytouchpad = require("widgets/touchpad")({ enabled = true })
+local myvolume = require("widgets/volume")()
 local mypowermenu = require("widgets/powermenu")({
     cb_lock_screen = locker,
     cb_system_suspend = function() awful.spawn("loginctl suspend") end,
@@ -205,6 +206,8 @@ awful.screen.connect_for_each_screen(function(s)
             mybacklight.widget,
             myvseparator,
             mytouchpad.widget,
+            myvseparator,
+            myvolume.widget,
             myvseparator,
             mypowermenu.widget,
             myvseparator,
