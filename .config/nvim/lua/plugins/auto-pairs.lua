@@ -10,7 +10,7 @@ return {
 			pairs.setup({})
 
 			-- Duplicate insertion with surrounding check
-			function rule_duplicate(a1, ins, a2, lang)
+			local function rule_duplicate(a1, ins, a2, lang)
 				pairs.add_rule(
 					Rule(ins, ins, lang)
 						:with_pair(function(opts)

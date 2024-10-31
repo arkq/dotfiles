@@ -1,16 +1,19 @@
 local function gps()
-	return require("nvim-gps").get_location()
+	return require("nvim-navic").get_location()
 end
 
 local function gps_is_available()
-	return require("nvim-gps").is_available()
+	return require("nvim-navic").is_available()
 end
 
 return {
 
 	-- IDE-like session manager
 	{ "rmagatti/auto-session",
-		opts = { lazy_support = true },
+		opts = {
+			-- Close File Explorer in all tabs
+			pre_save_cmds = { "tabdo NvimTreeClose" },
+			lazy_support = true },
 		init = function()
 			-- Add option recommended by the health check
 			vim.opt.sessionoptions = vim.opt.sessionoptions + "localoptions"
@@ -27,9 +30,10 @@ return {
 			extensions = { "fugitive", "man", "nvim-tree", "quickfix" },
 		} },
 
-	-- Breadcrumbs based on treesitter
-	{ "SmiteshP/nvim-gps",
-		opts = { disable_icons = true } },
+	-- Breadcrumbs based on LSP
+	{ "SmiteshP/nvim-navic",
+		dependencies = { "neovim/nvim-lspconfig" },
+		opts = { lsp = { auto_attach = true } } },
 
 	{ "nvim-tree/nvim-tree.lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },

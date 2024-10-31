@@ -4,23 +4,14 @@ return {
 		-- Set up plug-ins in defined order
 		priority = 120,
 		opts = {} },
+	-- Automatically setup all language servers
 	{ "williamboman/mason-lspconfig.nvim",
 		priority = 110,
-		opts = {} },
-	{ "neovim/nvim-lspconfig",
-		dependencies = { "hrsh7th/cmp-nvim-lsp" },
-		config = function()
-			local lsp = require("lspconfig")
-			local caps = require("cmp_nvim_lsp").default_capabilities()
-			-- Bash
-			lsp.bashls.setup({ capabilities = caps })
-			-- C/C++
-			lsp.clangd.setup({ capabilities = caps })
-			-- Lua
-			lsp.lua_ls.setup({ capabilities = caps })
-			-- Markdown
-			lsp.marksman.setup({ capabilities = caps })
-			-- Python
-			lsp.pylsp.setup({ capabilities = caps })
-		end },
+		opts = { handlers = {
+			function (server)
+				-- Advertise auto-completion capabilities to LSP
+				local caps = require("cmp_nvim_lsp").default_capabilities()
+				require("lspconfig")[server].setup({ capabilities = caps })
+			end
+		} } },
 }
