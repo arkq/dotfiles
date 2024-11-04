@@ -52,7 +52,8 @@ return {
 	{ "majutsushi/tagbar",
 		keys = {
 			{ "<F8>", ":TagbarToggle<CR>",
-				silent = true, desc = "Toggle TAG Explorer" } } },
+				silent = true, desc = "Toggle TAG Explorer" },
+		} },
 
 	-- Fuzzy file finder
 	{ "cloudhead/neovim-fuzzy",
@@ -72,13 +73,15 @@ return {
 		lazy = false, -- Something is not right when lazy-loaded...
 		keys = {
 			{ "<leader>h", ":FSHere<CR>",
-				silent = true, desc = "Switch between source and header file" } } },
+				silent = true, desc = "Switch between source and header file" },
+		} },
 
 	-- Comment-out code like a champ
 	{ "tpope/vim-commentary",
 		keys = {
 			{ "<C-_>", ":Commentary<CR>", mode = { "n", "v" },
-				silent = true, desc = "Toggle a comment" } } },
+				silent = true, desc = "Toggle a comment" },
+		} },
 
 	-- Prevent opening files in special windows
 	{ "stevearc/stickybuf.nvim",
@@ -88,26 +91,15 @@ return {
 	{ "tyru/open-browser.vim",
 		keys = {
 			{ "<leader>g", "<Plug>(openbrowser-smart-search)",
-				silent = true, desc = "Open/search current token in a web browser" } } },
-
-	-- Run code in a REPL-like way
-	{ "benlubas/molten-nvim",
-		build = ":UpdateRemotePlugins",
-		keys = {
-			{ "<leader>r", ":<C-u>MoltenEvaluateVisual<CR>gv", mode = { "v" },
-				silent = true, desc = "REPL: Evaluate visual selection" },
-			{ "<leader>rl", ":MoltenEvaluateLine<CR>",
-				silent = true, desc = "REPL: Evaluate line" },
-			{ "<leader>rr", ":MoltenReevaluateCell<CR>",
-				silent = true, desc = "REPL: Re-evaluate cell" },
-			{ "<leader>rd", ":MoltenDelete<CR>",
-				silent = true, desc = "REPL: Delete cell" },
-			{ "<leader>rc", ":MoltenInterrupt<CR>",
-				silent = true, desc = "REPL: Interrupt evaluation" },
-			{ "<leader>oh", ":MoltenHideOutput<CR>",
-				silent = true, desc = "REPL: Hide output" },
-			{ "<leader>os", ":noautocmd MoltenEnterOutput<CR>",
-				silent = true, desc = "REPL: Enter/show output" },
+				silent = true, desc = "Open/search current token in a web browser" },
 		} },
+
+	-- Ultimate cheat sheet for key mappings
+	{ "folke/which-key.nvim",
+		event = "VeryLazy",
+		keys = {
+			{ "<leader>?", ":WhichKey<CR>",
+				silent = true, desc = "Show global keymaps" } },
+		opts = { delay = 750 } },
 
 }

@@ -23,7 +23,8 @@ vim.opt.diffopt = vim.opt.diffopt + "vertical"
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
 vim.opt.spellfile = os.getenv("HOME") .. "/.config/nvim/spell.add"
-vim.keymap.set("n", "<F7>", ":setlocal spell! spell?<CR>")
+vim.keymap.set("n", "<F7>", ":setlocal spell! spell?<CR>", {
+	desc = "Toggle spellcheck" })
 
 vim.opt.hidden = true
 vim.opt.number = true
@@ -53,7 +54,8 @@ vim.opt.breakindent = true
 
 -- Folding tweaks
 vim.opt.foldlevel = 666
-vim.keymap.set("n", "<space>", "za")
+vim.keymap.set("n", "<space>", "za", {
+	desc = "Toggle fold under cursor" })
 
 -- Splits tweaks
 vim.opt.splitbelow = true
