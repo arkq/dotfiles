@@ -10,10 +10,10 @@ URxvt*scrollTtyKeypress:  true
 URxvt*scrollTtyOutput:    false
 URxvt*scrollWithBuffer:   false
 URxvt*perl-ext-common:    default,-option-popup,-selection-popup,font-size,matcher
-URxvt*keysym.C-Up:        perl:font-size:increase
-URxvt*keysym.C-Down:      perl:font-size:decrease
+URxvt*keysym.C-equal:     perl:font-size:increase
+URxvt*keysym.C-minus:     perl:font-size:decrease
 URxvt*url-launcher:       xdg-open
-URxvt*font-size.step:     4
+URxvt*font-size.step:     2
 URxvt*matcher.button:     1
 
 CMus*iconFile:            /home/arek/.icons/hicolor/48x48/apps/cmus.png
