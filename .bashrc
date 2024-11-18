@@ -13,13 +13,13 @@
 [ -s ~/.aliases ] && source ~/.aliases
 
 # history: ignore duplicates and skip whitespace
-export HISTCONTROL=ignoreboth
-export HISTTIMEFORMAT='%F %r  '
-export HISTFILESIZE=100000
-export HISTSIZE=-1
+HISTCONTROL=ignoreboth
+HISTTIMEFORMAT='%F %r  '
+HISTFILESIZE=100000
+HISTSIZE=-1
 # do not store garbage/irrelevant commands
-export HISTIGNORE="history:pwd:..:..."
-export HISTIGNORE="$HISTIGNORE:ls:la:ll:l.:ll."
+HISTIGNORE="history:pwd:..:..."
+HISTIGNORE="$HISTIGNORE:ls:la:ll:l.:ll."
 
 # colorize ls output
 command -v dircolors > /dev/null && eval "$(dircolors -b)"
