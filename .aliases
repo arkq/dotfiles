@@ -56,7 +56,7 @@ alias curl-auth='curl-json -H "Authorization: Bearer $JWT"'
 alias curl-ws='curl -H "Connection: Upgrade" -H "Upgrade: websocket"'
 
 # use line and column jumper
-alias vscode='vscode --goto'
+alias vscode='code --goto'
 
 # random cool stuff
 alias grep-nonascii='grep -P -n "[\x80-\xFF]"'
