@@ -2,6 +2,7 @@
 	// Editor
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.dragAndDrop": false,
+	"editor.fontFamily": "Hack Nerd Font Mono, Consolas, monospace",
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"editor.guides.indentation": false,

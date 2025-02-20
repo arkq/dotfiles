@@ -2,17 +2,23 @@
 	"name": "dotfiles",
 	"version": "1.0.0",
 	"publisher": "local",
-	"engines": { "vscode": "^1.0.0" },
+	"engines": {
+		"vscode": "^1.0.0"
+	},
 	"displayName": ".DOTFILES Extension Pack",
 	"description": "My Extensions for Visual Studio Code.",
-	"categories": [ "Extension Packs" ],
+	"categories": [
+		"Programming Languages",
+		"Extension Packs"
+	],
 	"readme": "README.md",
-	"author": { "name": "Arkadiusz Bokowy" },
+	"author": {
+		"name": "Arkadiusz Bokowy"
+	},
 	"extensionPack": [
 		"chrislajoie.vscode-modelines",
 		"christian-kohler.path-intellisense",
 		"davidanson.vscode-markdownlint",
-		"eamodio.gitlens",
 		"github.copilot",
 		"maelvalais.autoconf",
 		"markis.code-coverage",
