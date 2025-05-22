@@ -20,6 +20,8 @@ export HISTSIZE=-1
 # do not store garbage/irrelevant commands
 export HISTIGNORE="history:pwd:..:..."
 export HISTIGNORE="$HISTIGNORE:ls:la:ll:l.:ll."
+# do not store AI assistant queries
+export HISTIGNORE="$HISTIGNORE:\?*"
 
 # colorize ls output
 command -v dircolors > /dev/null && eval "$(dircolors -b)"

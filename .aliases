@@ -1,6 +1,9 @@
 # .aliases: bash environment pimping
 # vim: ft=sh
 
+# inline AI assistant
+alias ?='hey'
+
 # walk speedups and typo fixes
 alias ..='cd ..'
 alias ...='cd ../..'
