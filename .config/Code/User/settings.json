@@ -2,9 +2,10 @@
 	// Editor
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.dragAndDrop": false,
-	"editor.fontFamily": "Hack Nerd Font Mono, Consolas, monospace",
+	"editor.fontFamily": "'Hack Nerd Font Mono', Consolas, monospace",
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "modificationsIfAvailable",
 	"editor.guides.indentation": false,
 	"editor.insertSpaces": false,
 	"editor.minimap.enabled": false,
@@ -23,6 +24,7 @@
 	"editor.tabCompletion": "on",
 	"editor.tabSize": 2,
 	"editor.wordWrap": "on",
+	"git.mergeEditor": false,
 	"search.smartCase": true,
 	"terminal.integrated.scrollback": 500000,
 	"vim.enableNeovim": true,
@@ -70,6 +72,7 @@
 	// C/C++
 	"C_Cpp.experimentalFeatures": "Enabled",
 	// Python
+	"python.analysis.typeCheckingMode": "basic",
 	"python.linting.flake8Enabled": true,
 	"python.linting.pydocstyleEnabled": false,
 	"python.linting.pylintEnabled": false,
