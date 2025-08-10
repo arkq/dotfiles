@@ -22,7 +22,7 @@ export CFLAGS="${CFLAGS} -Wall -Wextra -Wshadow"
 export CXXFLAGS="${CFLAGS}"
 
 # enable C/C++ compilation cache
-export PATH=/usr/lib/ccache/bin:$PATH
+export PATH=/usr/lib/ccache:$PATH
 export GCC_COLORS=auto
 
 # always generate compile commands
