@@ -16,6 +16,8 @@
 	dissect = bisect
 [core]
 	pager = less -FRX
+[diff]
+	colorMoved = dimmed-zebra
 [init]
 	defaultBranch = master
 [log]
