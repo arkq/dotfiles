@@ -1,6 +1,5 @@
 # Startup script for python which enables history and tab name completion
 # for the interpreter interactive mode.
-# vim: ft=python
 
 # import needed modules
 import atexit

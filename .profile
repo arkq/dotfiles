@@ -10,7 +10,7 @@ export PATH=$PATH:/usr/sbin:/sbin/
 export LD_LIBRARY_PATH=$HOME/.local/lib
 
 # python interpreter customization
-export PYTHONSTARTUP=$HOME/.pythonrc
+export PYTHONSTARTUP=$HOME/.config/python/startup.py
 
 # setup Android native development
 export NDK=$HOME/bin/opt/android-ndk-r21d
