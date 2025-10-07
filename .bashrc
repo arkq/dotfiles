@@ -46,6 +46,7 @@ __history_fuzzy_search() {
 # setup adaptive prompt
 if [ -f /usr/share/liquidprompt/liquidprompt ]; then
 	LP_ENABLE_CMAKE=1
+	LP_ENABLE_GITSTATUSD=1
 	LP_ENABLE_HYPERLINKS=1
 	LP_ENABLE_SSH_COLORS=1
 	source /usr/share/liquidprompt/liquidprompt

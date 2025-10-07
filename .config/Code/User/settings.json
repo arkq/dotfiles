@@ -25,6 +25,7 @@
 	"editor.tabSize": 2,
 	"editor.wordWrap": "on",
 	"git.mergeEditor": false,
+	"scm.defaultViewMode": "tree",
 	"search.smartCase": true,
 	"terminal.integrated.scrollback": 500000,
 	"vim.enableNeovim": true,
@@ -77,6 +78,17 @@
 	"python.linting.pydocstyleEnabled": false,
 	"python.linting.pylintEnabled": false,
 	// Misc
+	"remote.extensionKind": {
+		"GitHub.copilot": [
+			"ui"
+		],
+		"GitHub.copilot-chat": [
+			"ui"
+		],
+		"naturallucky.googlesearch": [
+			"ui"
+		]
+	},
 	"vsintellicode.modify.editor.suggestSelection": "disabled",
 	"window.menuBarVisibility": "toggle",
 	"workbench.colorTheme": "Monokai",
