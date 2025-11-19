@@ -31,6 +31,15 @@ command -v lesspipe > /dev/null \
 	&& export LESSOPEN="|lesspipe %s" LESSCLOSE="lesspipe %s %s"
 export LESSCOLORIZER=/usr/bin/src-hilite-lesspipe.sh
 
+# general purpose fuzzy path finder
+command -v fzy > /dev/null \
+	&& bind -x '"\C-p": __path_fuzzy_search'
+__path_fuzzy_search() {
+	local path="$(find -- .* * 2> /dev/null | fzy)"
+	READLINE_LINE="${READLINE_LINE:0:$READLINE_POINT}$path${READLINE_LINE:$READLINE_POINT}"
+	READLINE_POINT=$(( READLINE_POINT + ${#path} ))
+}
+
 # history: fuzzy reverse search
 command -v fzy > /dev/null \
 	&& bind -x '"\C-r": __history_fuzzy_search'

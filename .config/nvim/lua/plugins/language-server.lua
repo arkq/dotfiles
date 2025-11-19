@@ -4,8 +4,10 @@ return {
 		-- Set up plug-ins in defined order
 		priority = 120,
 		opts = {} },
+	{ "neovim/nvim-lspconfig" },
 	-- Automatically setup all language servers
 	{ "williamboman/mason-lspconfig.nvim",
+		dependencies = { "neovim/nvim-lspconfig" },
 		priority = 110,
 		opts = { handlers = {
 			function (server)
