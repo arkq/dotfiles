@@ -1,10 +1,12 @@
 -- Setup formatexpr (gq) provider
 vim.o.formatexpr = "v:lua.myformatexpr()"
 _G.myformatexpr = function()
+	-- Use default line wrapping for git commits
+	if vim.bo.filetype == "gitcommit" then return 1 end
 	-- The formatexpr() function sets the default timeout by itself, so the
 	-- default set in the opts is not used. Used default timeout is 500 ms
 	-- which is not enough on slow machines.
-	require("conform").formatexpr({ timeout_ms = 5000 })
+	return require("conform").formatexpr({ timeout_ms = 5000 })
 end
 
 return {

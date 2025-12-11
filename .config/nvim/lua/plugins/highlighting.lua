@@ -5,7 +5,10 @@ return {
 		config = function () require("nvim-treesitter.configs").setup({
 			auto_install = true,
 			ensure_installed = { "c", "cpp", "lua", "python" },
-			highlight = { enable = true },
+			highlight = {
+				enable = true,
+				-- TS does not highlight title length correctly
+				disable = { "gitcommit" } },
 		}) end,
 		init = function()
 			vim.opt.foldmethod = "expr"
