@@ -34,7 +34,7 @@ export NINJAFLAGS=-j$(nproc)
 
 # setup Go environment
 export GOBIN=$HOME/.local/bin
-export GOPATH=$HOME/Documents/GO
+export GOPATH=$HOME/.local/share/go
 
 # access PlatformIO tools
 export PATH=$PATH:$HOME/.platformio/penv/bin

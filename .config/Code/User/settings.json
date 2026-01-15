@@ -56,29 +56,15 @@
 		"Arkadiusz",
 		"Bokowy"
 	],
-	// GitLens
-	"gitlens.codeLens.enabled": false,
-	"gitlens.currentLine.enabled": false,
-	"gitlens.hovers.enabled": false,
-	"gitlens.showWhatsNewAfterUpgrades": false,
-	"gitlens.advanced.messages": {
-		"suppressCommitHasNoPreviousCommitWarning": false,
-		"suppressCommitNotFoundWarning": false,
-		"suppressFileNotUnderSourceControlWarning": false,
-		"suppressGitVersionWarning": false,
-		"suppressLineUncommittedWarning": false,
-		"suppressNoRepositoryWarning": false,
-		"suppressUpdateNotice": true,
-		"suppressWelcomeNotice": false
-	},
 	// C/C++
-	"C_Cpp.experimentalFeatures": "Enabled",
+	"C_Cpp.experimentalFeatures": "enabled",
 	// Python
 	"python.analysis.typeCheckingMode": "basic",
 	"python.linting.flake8Enabled": true,
 	"python.linting.pydocstyleEnabled": false,
 	"python.linting.pylintEnabled": false,
 	// Misc
+	"chat.viewSessions.orientation": "stacked",
 	"remote.extensionKind": {
 		"GitHub.copilot": [
 			"ui"
