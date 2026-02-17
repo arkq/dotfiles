@@ -4,7 +4,7 @@
 
 local lgi = require('lgi')
 local gears = require('gears')
-local gtk = lgi.require('Gtk')
+local gtk = lgi.require('Gtk', '3.0')
 
 local utils = {}
 

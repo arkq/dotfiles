@@ -27,7 +27,7 @@ function widget:init(args)
 
 	self.element = self.mixer:get_element(self.control, 0)
 	self.db_range = self.element.playback_db_max - self.element.playback_db_min
-	self.db_step = 10
+	self.db_step = 2
 
 	self.icons = {
 		muted = utils.lookup_icon("audio-volume-muted-symbolic", beautiful.fg_normal),
