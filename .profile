@@ -20,6 +20,7 @@ export PATH=$PATH:$NDK/toolchains/llvm/prebuilt/linux-x86_64/bin
 export CFLAGS="-march=native -mtune=native -O2 -g -pipe"
 export CFLAGS="${CFLAGS} -Wall -Wextra -Wshadow"
 export CXXFLAGS="${CFLAGS}"
+export LDFLAGS="-fuse-ld=mold"
 
 # enable C/C++ compilation cache
 export PATH=/usr/lib/ccache:$PATH
