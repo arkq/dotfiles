@@ -21,6 +21,7 @@
 	defaultBranch = master
 [log]
 	decorate = auto
+	follow = true
 [push]
 	default = simple
 [pull]
