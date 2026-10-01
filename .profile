@@ -50,9 +50,6 @@ export VISUAL=nvim
 # show ANSI colors in less
 export LESS="-R"
 
-# use custom uncrustify configuration
-export UNCRUSTIFY_CONFIG=$HOME/.config/uncrustify/default.cfg
-
 # get rid of accessibility support
 export NO_AT_BRIDGE=1
 
