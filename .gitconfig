@@ -23,6 +23,7 @@
 	decorate = auto
 	follow = true
 [push]
+	autoSetupRemote = true
 	default = simple
 [pull]
 	rebase = false
