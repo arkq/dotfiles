@@ -1,19 +1,23 @@
-# .inputrc: readline customizations
+# .inputrc: readline customization
 
-# load distribution global settings
+# Load distribution global settings.
 $include /etc/inputrc
 
+# Do not play annoying sounds.
+set bell-style none
+
+# Use colors when showing tab-completion.
 set colored-stats on
 
-# smart-ass completion mode
+# Smart-ass completion mode.
 set completion-ignore-case on
 set completion-map-case on
 set skip-completed-text on
 set show-all-if-ambiguous on
 
-# readline adblock
+# Do not show dot-files on tab-completion by default.
 set match-hidden-files off
 
-# history search with "page up" and "page down"
+# History search with "page up" and "page down".
 "\e[5~": history-search-backward
 "\e[6~": history-search-forward
