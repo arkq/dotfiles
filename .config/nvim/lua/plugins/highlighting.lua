@@ -1,15 +1,19 @@
 return {
 
 	{ "nvim-treesitter/nvim-treesitter",
+		-- This plug-in does not support lazy-loading
+		lazy = false,
 		build = ":TSUpdate",
-		config = function () require("nvim-treesitter.configs").setup({
-			auto_install = true,
-			ensure_installed = { "c", "cpp", "lua", "python" },
-			highlight = {
-				enable = true,
-				-- TS does not highlight title length correctly
-				disable = { "gitcommit" } },
-		}) end,
+		config = function ()
+			require("nvim-treesitter.configs").setup({
+				auto_install = true,
+				ensure_installed = { "c", "cpp", "lua", "python" },
+				highlight = {
+					enable = true,
+					-- TS does not highlight title length correctly
+					disable = { "gitcommit" } },
+			})
+		end,
 		init = function()
 			vim.opt.foldmethod = "expr"
 			vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

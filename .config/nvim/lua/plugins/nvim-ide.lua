@@ -26,9 +26,13 @@ return {
 		opts = {
 			sections = {
 				lualine_c = { "filename", { gps, cond = gps_is_available } },
-				lualine_x = { "copilot", "encoding", "filetype" } },
-			extensions = { "fugitive", "man", "nvim-tree", "quickfix" },
-		} },
+				lualine_x = { "copilot", "encoding", "filetype" },
+				lualine_z = { "selectioncount", "location" } },
+			extensions = { "fugitive", "man", "nvim-tree", "quickfix" } },
+		init = function()
+			-- Disable native "show command" since it is handled by the plugin
+			vim.opt.showcmd = false
+		end },
 
 	-- Breadcrumbs based on LSP
 	{ "SmiteshP/nvim-navic",
