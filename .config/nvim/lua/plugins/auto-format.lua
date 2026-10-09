@@ -1,3 +1,14 @@
+-- Check if a file exists in the launch directory
+local function cwdexists(filename)
+  return vim.uv.fs_stat(vim.uv.cwd() .. "/" .. filename) ~= nil
+end
+
+-- Get C/C++ formatter based on the current directory setup
+local function cformatter()
+  if cwdexists(".uncrustify") then return "uncrustify" end
+  if cwdexists(".clang-format") then return "clang_format" end
+end
+
 -- Setup formatexpr (gq) provider
 vim.o.formatexpr = "v:lua.myformatexpr()"
 _G.myformatexpr = function()
@@ -21,6 +32,8 @@ return {
 		opts = {
 			default_format_opts = { lsp_format = "fallback" },
 			formatters_by_ft = {
+				c = { cformatter() },
+				cpp = { cformatter() },
 				go = { "goimports" },
 				markdown = { "mdformat" },
 				python = { "ruff_fix", "isort", "autopep8" },
