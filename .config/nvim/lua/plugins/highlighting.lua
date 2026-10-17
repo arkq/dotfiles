@@ -16,7 +16,7 @@ return {
 		end,
 		init = function()
 			vim.opt.foldmethod = "expr"
-			vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+			vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 			-- Disable folding at startup
 			vim.opt.foldenable = false
 		end },
