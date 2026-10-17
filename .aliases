@@ -1,19 +1,19 @@
 # .aliases: bash environment pimping
 # vim: ft=sh
 
-# inline AI assistant
+# Inline AI assistant.
 alias ?='hey'
 
-# walk speedups and typo fixes
+# Walk speedups and typo fixes.
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cd..='cd ..'
 alias cd-='cd -'
 
-# suppress CDPATH output
+# Suppress CDPATH output
 alias cd='>/dev/null cd'
 
-# emit colorized output
+# Emit colorized output.
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -27,16 +27,19 @@ alias ll='ls -l'
 alias l.='ls -d .*'
 alias ll.='ll -d .*'
 
-# even less typing than less
+# Even less typing than less.
 alias o='less'
 
-# simple one-line fuzzy finder
+# Simple one-line fuzzy finder.
 f() { ff() { find . -iname "*$**" ; } ; IFS="*" ff "$@" ; }
 
-# recursive grep shortcut
+# Recursive grep shortcut for standard UNIX grep.
 alias rgrep='grep -r -n'
 
-alias ggrep='git grep -n'
+# Git grep equivalent of rip grep.
+alias gg='git grep -n'
+
+# Find and replace in git repository.
 git-sed() {
 	if [[ $# -ne 2 ]]; then
 		echo "usage: git-sed <expression> <replacement>"
@@ -45,22 +48,22 @@ git-sed() {
 	fi
 }
 
-# check errors on a daily basis
+# Check errors on a daily basis.
 alias gcc='gcc -Wall -Wextra'
 alias g++='g++ -Wall -Wextra'
 
-# skip banner message
+# Skip banner message.
 alias gdb='gdb --quiet'
 
-# use CURL like a pro
+# Use CURL like a pro.
 alias curl-ajax='curl -H "X-Requested-With: XMLHttpRequest"'
 alias curl-json='curl-ajax -H "Content-Type: application/json"'
 alias curl-auth='curl-json -H "Authorization: Bearer $JWT"'
 alias curl-ws='curl -H "Connection: Upgrade" -H "Upgrade: websocket"'
 
-# use line and column jumper
+# Use line and column jumper.
 alias vscode='code --goto'
 
-# random cool stuff
+# Random cool stuff.
 alias grep-nonascii='grep -P -n "[\x80-\xFF]"'
 alias python3-http='python3 -m http.server'
