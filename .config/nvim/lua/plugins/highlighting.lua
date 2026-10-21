@@ -1,7 +1,7 @@
 return {
 
 	{ "nvim-treesitter/nvim-treesitter",
-		-- This plug-in does not support lazy-loading
+		-- This plug-in does not support lazy-loading.
 		lazy = false,
 		build = ":TSUpdate",
 		config = function ()
@@ -10,21 +10,24 @@ return {
 				ensure_installed = { "c", "cpp", "lua", "python" },
 				highlight = {
 					enable = true,
-					-- TS does not highlight title length correctly
+					-- TS does not highlight title length correctly.
 					disable = { "gitcommit" } },
 			})
 		end,
 		init = function()
 			vim.opt.foldmethod = "expr"
 			vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-			-- Disable folding at startup
+			-- Disable folding at startup.
 			vim.opt.foldenable = false
 		end },
 
-	-- Whitespace highlighting
+	-- Highlight trailing whitespaces.
 	{ "ntpeters/vim-better-whitespace" },
 
-	-- Highlight word under cursor
+	-- Show whitespaces in visual mode.
+	{ "mcauley-penney/visual-whitespace.nvim" },
+
+	-- Highlight word under cursor.
 	{ "RRethy/vim-illuminate",
 		config = function() require("illuminate").configure({
 			providers = { 'regex' },
