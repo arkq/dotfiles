@@ -3,7 +3,9 @@ vim.opt.smarttab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
-vim.opt.textwidth = 98
+
+vim.opt.textwidth = 99
+vim.opt.colorcolumn = "+0"
 
 vim.opt.title = true
 vim.opt.mousemodel = "extend"
@@ -17,6 +19,8 @@ vim.opt.ttyfast = true
 -- Quick command line mode
 vim.keymap.set({ "n", "v" }, ";", ":")
 
+-- Improve diff alignment in log files
+vim.opt.diffopt = vim.opt.diffopt + "linematch:60"
 -- Make vertical diff by default
 vim.opt.diffopt = vim.opt.diffopt + "vertical"
 
